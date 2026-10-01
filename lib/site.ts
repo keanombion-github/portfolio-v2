@@ -13,7 +13,7 @@ export const site = {
   description:
     "Frontend developer growing into full-stack. React, Next.js, .NET, PostgreSQL, and AWS. Building thoughtful interfaces and learning by shipping.",
   url: publicUrl(process.env.NEXT_PUBLIC_SITE_URL) || "http://localhost:3000",
-  email: process.env.NEXT_PUBLIC_CONTACT_EMAIL || "",
+  email: process.env.NEXT_PUBLIC_CONTACT_EMAIL || "keanombio@gmail.com",
   github: publicUrl(process.env.NEXT_PUBLIC_GITHUB_URL),
   linkedin: publicUrl(process.env.NEXT_PUBLIC_LINKEDIN_URL),
   booking: publicUrl(process.env.NEXT_PUBLIC_BOOKING_URL),

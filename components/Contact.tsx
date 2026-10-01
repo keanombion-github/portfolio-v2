@@ -3,6 +3,7 @@
 import { useRef, useState, type FormEvent } from "react";
 import { SectionHeader } from "./SectionHeader";
 import { site } from "@/lib/site";
+import { submitNetlifyForm } from "@/lib/netlify-form";
 
 const fieldClass =
   "w-full rounded-md border border-[var(--border-strong)] bg-[var(--bg)] px-3 py-3 text-[13px] text-[var(--text-bright)] outline-none transition-colors focus:border-[var(--accent)] disabled:opacity-60";
@@ -20,21 +21,10 @@ export function Contact() {
     if (submitting.current) return;
     submitting.current = true;
     const form = e.currentTarget;
-    const values = new FormData(form);
     setStatus("sending");
     setFeedback("Sending your message…");
     try {
-      const res = await fetch("/api/contact", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(Object.fromEntries(values.entries())),
-        signal: AbortSignal.timeout(20000),
-      });
-      const data = await res.json();
-      if (!res.ok || data.success !== true)
-        throw new Error(
-          data.error || "Your message could not be sent. Please try again.",
-        );
+      await submitNetlifyForm(form, "contact", 20000);
       setStatus("sent");
       setFeedback("Thanks — your message has been submitted.");
       form.reset();
@@ -97,7 +87,8 @@ export function Contact() {
             </div>
           )}
         </div>
-        <form onSubmit={submit} className="glass rounded-xl p-5 sm:p-6">
+        <form name="contact" method="POST" onSubmit={submit} className="glass rounded-xl p-5 sm:p-6">
+          <input type="hidden" name="form-name" value="contact" />
           <fieldset disabled={status === "sending"} className="space-y-4">
             <div className="grid gap-4 sm:grid-cols-2">
               <div>

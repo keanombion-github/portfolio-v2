@@ -28,20 +28,20 @@ export const posts: Post[] = [
         title: "Start with the page",
         paragraphs: [
           "A portfolio has a small surface area, but several different responsibilities. The page assembles sections. Those sections own the visible copy. A chat widget manages a conversation, while the server handles the connection to its model provider.",
-          "Keeping those boundaries explicit makes a simple change stay simple. Updating a project description should not require opening the chat transport or the contact email handler.",
+          "Keeping those boundaries explicit makes a simple change stay simple. Updating a project description should not require opening the chat transport or the contact form.",
         ],
       },
       {
         id: "keep-secrets-on-the-server",
         title: "Keep secrets on the server",
         paragraphs: [
-          "This project uses separate API routes for chat and Resend contact messages. Chat provides FAQ responses by default, with Gemini available when its credentials and model are configured. The browser can ask for a response without receiving provider credentials. That separation also gives each integration a place to validate inputs and handle upstream failures.",
+          "Chat uses a server route for FAQ responses and optional Gemini replies. The browser can ask for a response without receiving provider credentials. Contact and recommendation forms use Netlify Forms, which collects submissions for manual review and can email notifications without a separate mail service.",
           "The following sketch describes the responsibility split; it is not an additional endpoint or a complete security checklist.",
         ],
         code: {
           language: "text",
           content:
-            "Browser\n  ├─ Chat widget → /api/chat → FAQ / optional Gemini\n  └─ Contact form → /api/contact → Resend\n\nProvider credentials stay on the server.",
+            "Browser\n  ├─ Chat widget → /api/chat → FAQ / optional Gemini\n  └─ Contact and recommendation forms → Netlify Forms → dashboard / email notification\n\nOptional AI credentials stay on the server.",
         },
       },
       {

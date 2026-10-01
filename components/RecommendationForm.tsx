@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, type FormEvent } from "react";
+import { submitNetlifyForm } from "@/lib/netlify-form";
 
 const fieldClass =
   "mt-2 w-full rounded-lg border border-[var(--border-strong)] bg-[var(--bg)] px-4 py-3 text-sm text-[var(--text-bright)] placeholder:text-[var(--text-dim)]";
@@ -15,22 +16,10 @@ export function RecommendationForm() {
     event.preventDefault();
     if (pending) return;
     const form = event.currentTarget;
-    const data = new FormData(form);
     setPending(true);
     setResult(null);
     try {
-      const response = await fetch("/api/recommendations", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(Object.fromEntries(data)),
-        signal: AbortSignal.timeout(15000),
-      });
-      const payload = await response.json();
-      if (!response.ok)
-        throw new Error(
-          payload.error ||
-            "Your recommendation could not be sent. Please try again.",
-        );
+      await submitNetlifyForm(form, "recommendation", 15000);
       setResult({
         success: true,
         message: "Thank you. Your recommendation was sent for review.",
@@ -53,9 +42,12 @@ export function RecommendationForm() {
   }
   return (
     <form
+      name="recommendation"
+      method="POST"
       onSubmit={submit}
       className="space-y-5 rounded-2xl border border-[var(--border)] bg-[var(--surface)] p-6 sm:p-8"
     >
+      <input type="hidden" name="form-name" value="recommendation" />
       <div className="grid gap-5 sm:grid-cols-2">
         <label className="text-sm">
           Your name

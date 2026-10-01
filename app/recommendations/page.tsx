@@ -2,8 +2,6 @@ import { pageMetadata } from "@/lib/metadata";
 import Link from "next/link";
 import { RecommendationForm } from "@/components/RecommendationForm";
 import { recommendations } from "@/lib/recommendations";
-import { authConfigured, getIdentity } from "@/lib/auth";
-import { IdentityControls } from "@/components/IdentityControls";
 
 export const metadata = pageMetadata(
   "Recommendations",
@@ -11,13 +9,7 @@ export const metadata = pageMetadata(
   "/recommendations",
 );
 
-export default async function RecommendationsPage({
-  searchParams,
-}: {
-  searchParams: Promise<{ auth?: string }>;
-}) {
-  const identity = await getIdentity();
-  const params = await searchParams;
+export default function RecommendationsPage() {
   return (
     <div className="section-shell py-12 sm:py-20">
       <header className="mb-12">
@@ -102,11 +94,6 @@ export default async function RecommendationsPage({
           </p>
         </div>
         <div>
-          <IdentityControls
-            identity={identity}
-            configured={authConfigured()}
-            error={params.auth === "failed"}
-          />
           <RecommendationForm />
         </div>
       </section>

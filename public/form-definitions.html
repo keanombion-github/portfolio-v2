@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en">
+  <head><meta charset="utf-8"><title>Portfolio form definitions</title></head>
+  <body>
+    <!-- Netlify scans this static file during deployment. The visible forms live in React. -->
+    <form name="contact" method="POST" data-netlify="true" netlify-honeypot="website">
+      <input name="name" type="text">
+      <input name="email" type="email">
+      <textarea name="message"></textarea>
+      <input name="website" type="text">
+    </form>
+    <form name="recommendation" method="POST" data-netlify="true" netlify-honeypot="website">
+      <input name="name" type="text">
+      <input name="email" type="email">
+      <input name="role" type="text">
+      <input name="relationship" type="text">
+      <textarea name="quote"></textarea>
+      <input name="consent" type="text">
+      <input name="website" type="text">
+    </form>
+  </body>
+</html>

@@ -13,7 +13,7 @@ This block is written and re-added by `next dev` — verify at `node_modules/nex
 - `app/page.tsx` assembles the portfolio; `components/` owns the visible content.
 - `app/globals.css` owns theme tokens and terminal styling. Preserve both themes and responsive layouts.
 - Chat: `components/ChatWidget.tsx` and `app/api/chat/route.ts` (free FAQ with optional Gemini).
-- Contact: `components/Contact.tsx` and `app/api/contact/route.ts` (Resend).
+- Contact and recommendations: React forms submit to Netlify Forms using `lib/netlify-form.ts` and static definitions in `public/form-definitions.html`. Email notifications are set in Netlify.
 - `content/*.md` are source copy, not automatically rendered. `docs/project-scaffold.md` is historical planning.
 
 ## Efficient agents and skills
