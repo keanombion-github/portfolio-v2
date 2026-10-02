@@ -1,5 +1,6 @@
 import { pageMetadata } from "@/lib/metadata";
 import Link from "next/link";
+import Image from "next/image";
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 import { projects } from "@/lib/projects";
@@ -55,6 +56,32 @@ export default async function ProjectPage({
           </span>
         ))}
       </div>
+      {p.screenshots && p.screenshots.length > 0 && (
+        <section id="screenshots" className="mb-14">
+          <h2 className="mb-5 font-mono text-xl text-[var(--text-bright)]">
+            <span className="text-[var(--accent)]">## </span>Screenshots
+          </h2>
+          <div className="grid gap-6">
+            {p.screenshots.map((shot) => (
+              <figure key={shot.src}>
+                <div className="overflow-hidden rounded-xl border border-[var(--border-strong)] bg-[var(--surface)]">
+                  <Image
+                    src={shot.src}
+                    alt={shot.alt}
+                    width={1280}
+                    height={720}
+                    sizes="(max-width: 1200px) 100vw, 1136px"
+                    className="h-auto w-full"
+                  />
+                </div>
+                <figcaption className="mt-3 text-sm text-[var(--text-dim)]">
+                  {shot.caption}
+                </figcaption>
+              </figure>
+            ))}
+          </div>
+        </section>
+      )}
       <div className="grid lg:grid-cols-[1fr_230px] gap-14">
         <div className="prose-content">
           {p.sections.map((s) => (
@@ -74,6 +101,11 @@ export default async function ProjectPage({
             className="sticky top-28 border-l border-[var(--border)] pl-6 font-mono text-xs"
           >
             <p className="text-[var(--text-bright)] mb-5">## ON THIS PAGE</p>
+            {p.screenshots && p.screenshots.length > 0 && (
+              <a href="#screenshots" className="block py-2 hover:text-[var(--accent)]">
+                Screenshots
+              </a>
+            )}
             {p.sections.map((s) => (
               <a
                 key={s.id}

@@ -6,6 +6,7 @@ export interface Project {
   role: string;
   status: string;
   demoUrl?: string;
+  screenshots?: { src: string; alt: string; caption: string }[];
   stack: string[];
   sections: { id: string; title: string; body: string }[];
 }
@@ -19,6 +20,13 @@ export const projects: Project[] = [
     role: "Full-Stack · Portfolio Project",
     status: "In progress",
     demoUrl: "https://boardsync-web.netlify.app/",
+    screenshots: [
+      {
+        src: "/projects/boardsync-login.png",
+        alt: "BoardSync sign-in screen with email and password fields",
+        caption: "Public sign-in screen. The board workspace is available after creating an account.",
+      },
+    ],
     stack: [".NET", "PostgreSQL", "React", "Next.js", "SignalR", "Redis"],
     sections: [
       {
@@ -39,7 +47,7 @@ export const projects: Project[] = [
       {
         id: "status",
         title: "Current status",
-        body: "A public preview is now available to explore. The project is still in progress; screenshots, implementation details, and results will be added as they are ready to share.",
+        body: "A public preview is available to explore. It opens at account sign-in; the board workspace is available after creating an account. The project is still in progress, and more implementation details will be added as they are ready to share.",
       },
     ],
   },
