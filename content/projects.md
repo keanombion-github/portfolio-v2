@@ -16,6 +16,8 @@ Redis, with PostgreSQL as the data store.
 
 **Stack:** .NET · PostgreSQL · React/Next.js · SignalR · Redis
 
+**Public preview:** https://boardsync-web.netlify.app/ (project still in progress)
+
 ---
 
 ### [02] Invoice Reminder — Micro-SaaS

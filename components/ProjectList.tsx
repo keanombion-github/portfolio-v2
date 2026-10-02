@@ -74,6 +74,9 @@ export function ProjectList() {
           >
             <span className="font-mono text-xs text-[var(--text-dim)]">
               {p.status}
+              {p.demoUrl && (
+                <span className="mt-2 block text-[var(--accent)]">Live demo ↗</span>
+              )}
             </span>
             <div>
               <h2 className="font-mono text-xl text-[var(--text-bright)] group-hover:text-[var(--accent)] mb-3">

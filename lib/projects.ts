@@ -5,6 +5,7 @@ export interface Project {
   summary: string;
   role: string;
   status: string;
+  demoUrl?: string;
   stack: string[];
   sections: { id: string; title: string; body: string }[];
 }
@@ -17,6 +18,7 @@ export const projects: Project[] = [
       "A collaborative workspace for moving ideas from to-do to done. A full-stack project exploring real-time updates, clear boundaries, and a responsive React interface.",
     role: "Full-Stack · Portfolio Project",
     status: "In progress",
+    demoUrl: "https://boardsync-web.netlify.app/",
     stack: [".NET", "PostgreSQL", "React", "Next.js", "SignalR", "Redis"],
     sections: [
       {
@@ -37,7 +39,7 @@ export const projects: Project[] = [
       {
         id: "status",
         title: "Current status",
-        body: "Work in progress. Screenshots, implementation details, and results will be added when they are ready to share. No public demo is available yet.",
+        body: "A public preview is now available to explore. The project is still in progress; screenshots, implementation details, and results will be added as they are ready to share.",
       },
     ],
   },

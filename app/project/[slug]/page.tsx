@@ -37,6 +37,17 @@ export default async function ProjectPage({
       <p className="page-intro">
         {p.subtitle}. {p.summary}
       </p>
+      {p.demoUrl && (
+        <a
+          className="button button-primary mb-8"
+          href={p.demoUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label={`Open ${p.title} live demo in a new tab`}
+        >
+          ↗ Open live demo
+        </a>
+      )}
       <div className="flex flex-wrap gap-2 mb-12">
         {p.stack.map((s) => (
           <span key={s} className="tag">

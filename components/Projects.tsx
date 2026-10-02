@@ -20,7 +20,10 @@ export function Projects() {
           >
             <div className="flex justify-between font-mono text-xs">
               <span className="text-[var(--accent)]">[0{i + 1}]</span>
-              <span className="status-chip">{p.status}</span>
+              <span className="flex flex-wrap justify-end gap-2">
+                {p.demoUrl && <span className="status-chip">Live demo available</span>}
+                <span className="status-chip">{p.status}</span>
+              </span>
             </div>
             <h3 className="font-mono text-2xl text-[var(--text-bright)] mt-7 mb-2 group-hover:text-[var(--accent)] transition-colors">
               {p.title}{" "}
