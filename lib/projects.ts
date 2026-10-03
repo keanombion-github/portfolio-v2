@@ -22,6 +22,16 @@ export const projects: Project[] = [
     demoUrl: "https://boardsync-web.netlify.app/",
     screenshots: [
       {
+        src: "/projects/boardsync-board.png",
+        alt: "BoardSync Product Roadmap board with Todo, In progress, and Ready for Testing columns and an assigned card",
+        caption: "The signed-in Product Roadmap board, with columns, a card, and an assignee.",
+      },
+      {
+        src: "/projects/boardsync-card-details.png",
+        alt: "BoardSync card details showing the description editor, assignee, comments, attachment links, and reactions",
+        caption: "Card details include editing, assignment, comments, attachment links, and reactions.",
+      },
+      {
         src: "/projects/boardsync-login.png",
         alt: "BoardSync sign-in screen with email and password fields",
         caption: "Public sign-in screen. The board workspace is available after creating an account.",
