@@ -2,32 +2,21 @@
 section: about
 ---
 
-## $ whoami
+# From storefront interfaces to full-stack applications
 
-I started as a frontend developer, working across BigCommerce storefronts,
-Figma-to-code handoffs, and day-to-day support/operations work — SLA ticket
-management, cross-functional troubleshooting, the stuff that keeps a product
-running. Along the way I picked up AWS S3 workflows and got fluent in turning
-designs into shippable code.
+My foundation is frontend development: BigCommerce storefronts, design handoffs,
+responsive pages, and maintenance for live client websites. Support and operations
+added SLA tickets, troubleshooting, and AWS-backed workflows to that perspective.
 
-Right now I'm upskilling into full-stack: .NET on the backend, React/Next.js
-on the front, PostgreSQL and AWS tooling tying it together. Two side projects
-are where that's coming together —
+I am extending that experience through guided learning with React, Next.js,
+.NET, PostgreSQL, and Supabase. I want to trace a change through the interface,
+permissions, data, and the workflow it serves.
 
-- **BoardSync** — a real-time collaborative Kanban board, built to demonstrate
-  hireable full-stack skills end-to-end: Vertical Slice Architecture on
-  .NET, SignalR + Redis for real-time sync, React/Next.js with TanStack
-  Query and Zustand on the front.
-- **An invoice reminder micro-SaaS** — a lean side-income experiment: escalating
-  payment reminder emails with embedded Stripe Payment Links, built on
-  Next.js, Supabase, Resend, and Stripe.
+- BoardSync is an in-progress Kanban project with a public sign-in preview and
+  workspace screenshots. Real-time behavior still needs verification.
+- StoreCraft is an experimental merchant dashboard and storefront builder.
+  Its public sandbox uses fictional data, browser saves, and simulated payments.
+  A separate database-backed merchant path exists in its repository; the hosted
+  authenticated journey has not been independently verified for this portfolio.
 
-### Current stack
-
-`React` / `Next.js` · `.NET` · `PostgreSQL` · `AWS` · `TanStack Query` ·
-`Zustand` · `SignalR` · `Redis` · `Stripe`
-
-### Tools I work in
-
-Fork (Git GUI), Antigravity (IDE), the `figma-developer-mcp` MCP integration
-for Figma-to-code work.
+Read the blog for the stories and decisions behind these projects.

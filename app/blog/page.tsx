@@ -5,7 +5,7 @@ import { posts } from "@/lib/posts";
 
 export const metadata = pageMetadata(
   "Developer notes",
-  "Notes on portfolio architecture, full-stack development, and planning BoardSync.",
+  "Build stories from BoardSync and StoreCraft, and the e-commerce experience behind Kean's full-stack projects.",
   "/blog",
 );
 
@@ -29,8 +29,9 @@ export default function BlogPage() {
         <span className="text-[var(--accent)]">~/notes</span>
       </h1>
       <p className="mt-6 max-w-2xl text-base leading-8 text-[var(--text)]">
-        Short notes on building for the web. Architecture decisions, project
-        plans, and the details worth writing down along the way.
+        The stories behind BoardSync and StoreCraft: what I chose to build,
+        how my frontend and e-commerce experience informs the work, and the
+        decisions I&apos;m learning to make across a whole application.
       </p>
       <BlogIndex />
       <div className="terminal-panel mt-10 flex flex-wrap items-center justify-between gap-5 p-6">

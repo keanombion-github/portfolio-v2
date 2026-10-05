@@ -30,7 +30,7 @@ export default async function ProjectPage({
       <Link href="/projects" className="eyebrow hover:text-[var(--accent)]">
         ← cd ../projects
       </Link>
-      <div className="mt-10 flex gap-3">
+      <div className="mt-10 flex flex-wrap gap-3">
         <span className="status-chip">{p.status}</span>
         <span className="eyebrow">{p.role}</span>
       </div>
@@ -48,6 +48,11 @@ export default async function ProjectPage({
         >
           ↗ Open live demo
         </a>
+      )}
+      {p.storySlug && (
+        <Link className="button mb-8 sm:ml-3" href={`/blog/${p.storySlug}`}>
+          Read the build story →
+        </Link>
       )}
       <div className="flex flex-wrap gap-2 mb-12">
         {p.stack.map((s) => (

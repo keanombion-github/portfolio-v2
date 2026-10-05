@@ -47,7 +47,7 @@ With both Gemini settings configured, the server requests a short answer grounde
 
 ## Contact and recommendations
 
-Both forms submit to Netlify Forms. `public/form-definitions.html` lets Netlify detect their field names during deployment, while the visible React forms send URL-encoded AJAX requests. In the Netlify dashboard, enable **Forms → Form detection** before deploying this change. After the deploy, confirm `contact` and `recommendation` appear under Forms. Set an email notification for both forms at **Forms → Submission notifications** to `keanombio@gmail.com`. Netlify stores submissions in the dashboard; the notification is what forwards them to your inbox. Do not treat an HTTP success as proof that an email notification arrived.
+Both forms submit to Netlify Forms. `public/form-definitions.html` lets Netlify detect their field names during deployment, while the visible React forms send URL-encoded AJAX requests. In the Netlify dashboard, enable **Forms → Form detection** before deploying this change. After the deploy, confirm `contact` and `recommendation` appear under Forms. Set an email notification for both forms at **Forms → Submission notifications** to `keanombion@gmail.com`. Netlify stores submissions in the dashboard; the notification is what forwards them to your inbox. Do not treat an HTTP success as proof that an email notification arrived.
 
 Recommendations need manual review. Nothing is auto-published. After obtaining permission and checking a submission, add an entry to `lib/recommendations.ts` and redeploy. The public data does not include private email addresses. The form does not verify the submitter's identity.
 

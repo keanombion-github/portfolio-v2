@@ -92,7 +92,7 @@ export default function AboutPage() {
                 Kean — frontend developer, growing into full-stack.
               </p>
               <p className="mt-2 text-[var(--text-dim)]">
-                Curiosity is a work in progress, too.
+                Design experience. Operational context. Working applications.
               </p>
             </div>
           </div>
@@ -111,8 +111,9 @@ export default function AboutPage() {
             <p>
               Now I’m working toward full-stack development. I’m learning .NET,
               deepening my React and Next.js skills, and bringing PostgreSQL and
-              AWS into the picture. Personal projects are where I make that
-              learning concrete.
+              Supabase into the picture. BoardSync gives me a collaboration
+              workflow to explore; StoreCraft brings me back to e-commerce,
+              this time connecting a merchant workspace to the storefront.
             </p>
           </div>
           <Link href="/projects" className="button mt-7 inline-flex">
@@ -171,17 +172,21 @@ export default function AboutPage() {
           </article>
           <article className="rounded-xl border border-[var(--border)] p-6">
             <p className="font-mono text-xs text-[var(--accent)]">
-              EXPLORING · IDEA
+              BUILDING · EXPERIMENTAL MVP
             </p>
             <h3 className="mt-3 text-xl text-[var(--text-bright)]">
-              Invoice reminders
+              StoreCraft
             </h3>
             <p className="mt-3 text-sm leading-7">
-              An idea for a small tool that follows up on unpaid invoices with
-              reminder emails and payment links.
+              An e-commerce workspace with products, orders, shipping settings,
+              and a visual storefront builder. The public demo uses fictional
+              data and simulated payments.
             </p>
           </article>
         </div>
+        <Link href="/blog/from-storefront-work-to-full-stack-projects" className="button mt-7 inline-flex">
+          Read how these projects connect →
+        </Link>
       </section>
     </div>
   );

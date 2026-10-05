@@ -10,7 +10,7 @@ const stackItems = [
   "Zustand",
   "SignalR",
   "Redis",
-  "Stripe",
+  "Supabase",
 ];
 
 export function About() {
@@ -33,13 +33,13 @@ export function About() {
         </p>
 
         <p className="text-[16px] leading-[1.7] text-[var(--text)] text-pretty">
-          Right now I&apos;m upskilling into full-stack:{" "}
+          I&apos;m extending that experience across the application:{" "}
           <em className="text-[var(--accent)] not-italic">.NET</em> on the
           backend,{" "}
           <em className="text-[var(--accent)] not-italic">React/Next.js</em> on
           the front,{" "}
           <em className="text-[var(--accent)] not-italic">
-            PostgreSQL and AWS
+            PostgreSQL and Supabase
           </em>{" "}
           tooling tying it together. Two side projects are where that&apos;s
           coming together —
@@ -51,25 +51,25 @@ export function About() {
               →
             </span>
             <strong className="text-[var(--text-bright)]">BoardSync</strong> — a
-            real-time collaborative Kanban board, built to demonstrate hireable
-            full-stack skills end-to-end.
+            collaborative Kanban project exploring how columns, cards, and
+            assignment help people organize shared work.
           </li>
           <li>
             <span className="text-[var(--accent)] font-[family-name:var(--font-mono)] text-[13px] mr-2">
               →
             </span>
             <strong className="text-[var(--text-bright)]">
-              Invoice Reminder
+              StoreCraft
             </strong>{" "}
-            — a lean micro-SaaS experiment: escalating payment reminder emails
-            with embedded Stripe Payment Links.
+            — a merchant dashboard and storefront builder that connects my
+            e-commerce background with products, page design, and order workflows.
           </li>
         </ul>
 
         {/* Current stack */}
         <div className="pt-6">
           <h3 className="font-[family-name:var(--font-mono)] text-[12px] text-[var(--text-dim)] tracking-[0.05em] mb-4">
-            CURRENT STACK
+            WORKING WITH &amp; EXPLORING
           </h3>
           <div className="flex flex-wrap gap-2">
             {stackItems.map((tech) => (
@@ -89,7 +89,7 @@ export function About() {
             TOOLS I WORK IN
           </h3>
           <p className="text-[14px] text-[var(--text-dim)] font-[family-name:var(--font-mono)]">
-            Fork (Git GUI) · Antigravity (IDE) · figma-developer-mcp
+            Figma for design handoffs · Git for tracking changes
           </p>
         </div>
       </div>

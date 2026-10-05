@@ -13,16 +13,16 @@ export function Hero() {
           <span className="terminal-cursor" aria-hidden="true" />
         </h1>
         <p className="font-mono text-sm text-[var(--text-dim)] mb-7">
-          Frontend Developer · Full-Stack in progress · Remote
+          Frontend Developer · E-commerce experience · Full-stack projects
         </p>
         <p className="text-[17px] leading-[1.8] max-w-[54ch]">
-          I build interfaces that ship, and I&apos;m expanding into{" "}
+          I turn designs into working storefronts, and I&apos;m expanding into{" "}
           <em className="text-[var(--text-bright)] not-italic">full-stack</em>:
-          .NET on the backend, React on the front, PostgreSQL and AWS tying it
-          together. From BigCommerce storefronts to day-to-day support, I care
-          about software that works for the people using it.{" "}
+          React and Next.js on the frontend, .NET and PostgreSQL behind it.
+          BigCommerce work and support for live websites taught me to care
+          about the details people use every day.{" "}
           <span className="text-[var(--text-bright)]">
-            Now building BoardSync.
+            I&apos;m putting that experience into BoardSync and StoreCraft.
           </span>
         </p>
         <div className="flex flex-wrap items-center gap-3 mt-9">

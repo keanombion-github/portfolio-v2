@@ -1,19 +1,21 @@
 export const CHAT_LIMIT = 600;
 export type ChatMessage = { role: "user" | "model"; content: string };
-export const portfolioFacts = `Kean started in frontend development, with BigCommerce storefronts, Figma-to-code handoffs, support operations, SLA ticket management and AWS S3 workflows. He is building full-stack skills with React, Next.js, .NET (C#), PostgreSQL and AWS. His portfolio projects include BoardSync, an in-progress collaborative Kanban board with a public preview at https://boardsync-web.netlify.app/ and planned SignalR and Redis integration, and Invoice Reminder, an early invoice reminder concept using Next.js, Supabase, Resend and Stripe Payment Links. These are portfolio/side projects; do not claim production adoption, customers or measured results. Tools include Fork, Antigravity and Figma. Visitors can discuss freelance or full-time opportunities through the contact section. No confirmed rates, location, years of experience, qualifications, exact availability or private contact details are provided.`;
+export const portfolioFacts = `Kean has frontend and e-commerce experience with BigCommerce storefronts, Figma handoffs, support operations, SLA tickets and AWS S3 workflows. He is extending that foundation with React, Next.js, .NET and PostgreSQL. BoardSync is an in-progress Kanban project at https://boardsync-web.netlify.app/ with workspace screenshots; its SignalR/Redis real-time direction is not independently verified. StoreCraft is an experimental commerce MVP at https://storecraft-demo.netlify.app/ with products, orders, shipping settings, themes and a visual storefront builder. The public browser sandbox uses fictional data, local browser saves and simulated payments. Its repository includes a separate Supabase/.NET/PostgreSQL merchant path; the hosted authenticated journey has not been independently verified. No live payments or connected OMS are claimed. These are guided learning and portfolio projects, not established commercial products. Build stories are available in the blog. Never invent customers, metrics, revenue, rates or exact availability. Contact Kean at keanombion@gmail.com or through the contact section.`;
 
 export function faqReply(question: string): string {
   const q = question.toLowerCase();
-  if (/\b(invoice|payment|stripe)\b/.test(q))
-    return "Invoice Reminder is a lean side-project concept for freelancers and agencies: escalating reminder emails with Stripe Payment Links. Its stack brings together Next.js, Supabase, Resend and Stripe.";
-  if (/\b(board|boardsync|kanban|project|projects)\b/.test(q))
-    return "BoardSync is an in-progress collaborative Kanban portfolio project with a live preview. Its planned stack combines React/Next.js, .NET and PostgreSQL with SignalR and Redis for real-time updates. Kean is also exploring Invoice Reminder. Open the BoardSync project page under Selected Work for the demo link.";
+  if (/\b(storecraft|store|storefront|commerce|shopify|shipping|payment|stripe|builder)\b/.test(q))
+    return "StoreCraft connects Kean's e-commerce experience to a merchant dashboard, products, orders, shipping settings and a visual storefront builder. Its public browser sandbox uses fictional data and simulated payments; changes stay on your device. Open its project page for the demo and build story.";
+  if (/\b(board|boardsync|kanban)\b/.test(q))
+    return "BoardSync is Kean's in-progress collaborative Kanban project. Its project page includes a sign-in preview, workspace screenshots and a build story. Real-time behavior remains something to verify.";
+  if (/\b(project|projects|invoice)\b/.test(q))
+    return "Kean's featured projects are BoardSync for collaborative task organization and StoreCraft for merchant workflows and storefront building. Both have previews and build stories. StoreCraft has replaced the earlier Invoice Reminder concept in Selected Work.";
   if (
     /\b(stack|tech|technologies|react|backend|frontend|skills|skill|language)\b/.test(
       q,
     )
   )
-    return "Kean works with React and Next.js and is growing into full-stack development with .NET (C#), PostgreSQL and AWS. His projects also explore TanStack Query, Zustand, SignalR, Redis and Stripe.";
+    return "Kean builds frontend interfaces with React and Next.js and is extending his skills with .NET, PostgreSQL and Supabase. BoardSync explores collaboration; StoreCraft connects a merchant workspace with a customer storefront.";
   if (
     /\b(hire|hiring|available|availability|freelance|contact|email|work|rate|rates|salary)\b/.test(
       q,

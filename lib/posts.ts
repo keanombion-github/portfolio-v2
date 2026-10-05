@@ -1,3 +1,5 @@
+import { projectPosts } from "./project-posts";
+
 export type Post = {
   slug: string;
   title: string;
@@ -14,6 +16,7 @@ export type Post = {
 };
 
 export const posts: Post[] = [
+  ...projectPosts,
   {
     slug: "a-portfolio-with-clear-boundaries",
     title: "A portfolio with clear boundaries",

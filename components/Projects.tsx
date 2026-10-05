@@ -6,10 +6,10 @@ export function Projects() {
     <section className="section-shell" id="projects">
       <SectionHeader
         number="02"
-        label="ON THE WORKBENCH"
+        label="FROM EXPERIENCE TO APPLICATIONS"
         heading="Selected projects"
         path="~/projects/featured"
-        subtitle={`${projects.length} projects · work in progress`}
+        subtitle="Two live previews: organizing team work and building an online store."
       />
       <div className="grid md:grid-cols-2 gap-5">
         {projects.map((p, i) => (

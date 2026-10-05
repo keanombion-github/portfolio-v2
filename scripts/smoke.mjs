@@ -5,7 +5,10 @@ const paths = [
   "/about",
   "/projects",
   "/project/boardsync",
-  "/project/invoice-reminder",
+  "/project/storecraft",
+  "/blog/storecraft-from-storefronts-to-store-builder",
+  "/blog/boardsync-making-work-visible",
+  "/blog/from-storefront-work-to-full-stack-projects",
   "/blog",
   "/blog/a-portfolio-with-clear-boundaries",
   "/blog/planning-a-realtime-kanban-board",
@@ -19,6 +22,17 @@ const paths = [
 for (const path of paths) {
   const response = await fetch(base + path);
   assert.equal(response.status, 200, path);
+  if (path === "/projects") {
+    const html = await response.text();
+    assert.match(html, /\/project\/storecraft/);
+    assert.doesNotMatch(html, /\/project\/invoice-reminder/);
+  }
+  if (path === "/project/storecraft") {
+    const html = await response.text();
+    assert.match(html, /https:\/\/storecraft-demo\.netlify\.app/);
+    assert.match(html, /storecraft-from-storefronts-to-store-builder/);
+    assert.match(html, /simulated/);
+  }
   if (path === "/rss.xml")
     assert.match(await response.text(), /<rss version="2.0">/);
   if (path === "/sitemap.xml")

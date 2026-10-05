@@ -2,39 +2,28 @@
 section: projects
 ---
 
-## $ ls projects/
+# Selected projects
 
-### [01] BoardSync — Real-Time Collaborative Kanban Board
+## BoardSync - collaborative task organization
 
-**Full-Stack · Portfolio Project**
+A Kanban project exploring columns, cards, assignment, and shared work.
+Workspace screenshots show the board and card-details interface.
 
-A real-time collaborative Kanban board built to demonstrate end-to-end
-full-stack skills. Backend follows Vertical Slice Architecture on .NET with
-Dapper, FluentValidation, and Serilog; the frontend is React/Next.js with
-TanStack Query and Zustand for state. Real-time sync runs on SignalR and
-Redis, with PostgreSQL as the data store.
+- Status: in progress.
+- Preview: https://boardsync-web.netlify.app/
+- Stack direction: React/Next.js, .NET, PostgreSQL, SignalR, Redis.
+- Story: /blog/boardsync-making-work-visible
 
-**Stack:** .NET · PostgreSQL · React/Next.js · SignalR · Redis
+## StoreCraft - merchant workspace and storefront builder
 
-**Public preview:** https://boardsync-web.netlify.app/ (project still in progress)
+An experimental e-commerce MVP informed by BigCommerce storefront experience.
+Products, orders, shipping settings, themes, and page design connect the merchant
+workspace with a customer storefront.
 
----
+- Preview: https://storecraft-demo.netlify.app/
+- Stack: Next.js, TypeScript, .NET, PostgreSQL, Supabase.
+- Public sandbox: fictional data, browser changes, and simulated payments.
+- The hosted authenticated merchant journey still needs verification.
+- Story: /blog/storecraft-from-storefronts-to-store-builder
 
-### [02] Invoice Reminder — Micro-SaaS
-
-**Full-Stack · Side Project**
-
-A lean invoice reminder tool aimed at freelancers and agencies: sends
-escalating payment reminder emails with embedded Stripe Payment Links. MVP
-is deliberately minimal — one invoice in, one reminder email out, one
-payment link embedded — no dashboard, no self-serve signup, built to
-validate the idea fast.
-
-**Stack:** Next.js · Supabase · Resend · Stripe
-
----
-
-### [03] _Your next project goes here_
-
-Add a short project as you finish another build — even a small tool counts
-if it shows a skill you want to be hired for.
+No live payments, commercial adoption, or connected OMS are claimed.

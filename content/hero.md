@@ -1,21 +1,13 @@
 ---
 section: hero
-status: "AVAILABLE · open to freelance & full-time"
 ---
 
-# $ hi, I'm Kean
+# Hi, I'm Kean
 
-Frontend Developer → Full-Stack in progress
+Frontend Developer - E-commerce experience - Full-stack projects
 
-I build interfaces that ship, and I'm expanding into full-stack: .NET on the
-backend, PostgreSQL for data, AWS for infrastructure. My day job keeps me
-close to real support/operations work — SLAs, cross-functional fixes — while
-my side projects are where I push into new territory: real-time apps,
-Stripe billing, self-hosted tooling.
+I turn designs into working storefronts and extend that experience through
+BoardSync and StoreCraft. BigCommerce work and support for live websites inform
+how I think about interfaces, data, and the people using them.
 
-**CTA buttons:** `get in touch` · `ls projects/`
-
-**Socials / links:**
-- GitHub: _add your handle_
-- LinkedIn: _add your profile_
-- Email: _add your contact email_
+Contact: keanombion@gmail.com
