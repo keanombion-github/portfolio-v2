@@ -20,3 +20,7 @@ permissions, data, and the workflow it serves.
   authenticated journey has not been independently verified for this portfolio.
 
 Read the blog for the stories and decisions behind these projects.
+
+- OrderPilot explores fulfillment after checkout, with a seeded standalone OMS demo.
+- K3 Billing Tracker was built for a friend's WiFi business to organize subscribers,
+  renewal dates, and payment records. Its hosted workspace is owner-only.

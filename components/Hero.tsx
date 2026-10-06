@@ -22,7 +22,8 @@ export function Hero() {
           BigCommerce work and support for live websites taught me to care
           about the details people use every day.{" "}
           <span className="text-[var(--text-bright)]">
-            I&apos;m putting that experience into BoardSync and StoreCraft.
+            I&apos;m putting that experience into storefronts, order fulfillment,
+            and practical tools for business owners.
           </span>
         </p>
         <div className="flex flex-wrap items-center gap-3 mt-9">

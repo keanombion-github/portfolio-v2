@@ -44,9 +44,9 @@ export default async function ProjectPage({
           href={p.demoUrl}
           target="_blank"
           rel="noopener noreferrer"
-          aria-label={`Open ${p.title} live demo in a new tab`}
+          aria-label={`${p.demoLabel || "Open live demo"}: ${p.title} in a new tab`}
         >
-          ↗ Open live demo
+          ↗ {p.demoLabel || "Open live demo"}
         </a>
       )}
       {p.storySlug && (

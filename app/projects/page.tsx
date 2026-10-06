@@ -4,7 +4,7 @@ import { ProjectList } from "@/components/ProjectList";
 import { projects } from "@/lib/projects";
 export const metadata = pageMetadata(
   "Projects",
-  "Work in progress: BoardSync and early experiments in full-stack development.",
+  "Explore OrderPilot, K3 Billing Tracker, StoreCraft, and BoardSync: commerce, operations, and business workflows.",
   "/projects",
 );
 export default function ProjectsPage() {

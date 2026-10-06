@@ -184,6 +184,7 @@ export default function AboutPage() {
             </p>
           </article>
         </div>
+        <p className="mt-6 text-sm leading-7">OrderPilot extends this work into fulfillment, while K3 Billing Tracker addresses a friend&apos;s payment-tracking problem. These projects connect my frontend foundation to the operations and everyday tasks behind a business.</p>
         <Link href="/blog/from-storefront-work-to-full-stack-projects" className="button mt-7 inline-flex">
           Read how these projects connect →
         </Link>

@@ -9,7 +9,7 @@ export function Projects() {
         label="FROM EXPERIENCE TO APPLICATIONS"
         heading="Selected projects"
         path="~/projects/featured"
-        subtitle="Two live previews: organizing team work and building an online store."
+        subtitle="From storefronts to fulfillment and payment tracking: practical workflows backed by working applications."
       />
       <div className="grid md:grid-cols-2 gap-5">
         {projects.map((p, i) => (
@@ -21,7 +21,7 @@ export function Projects() {
             <div className="flex justify-between font-mono text-xs">
               <span className="text-[var(--accent)]">[0{i + 1}]</span>
               <span className="flex flex-wrap justify-end gap-2">
-                {p.demoUrl && <span className="status-chip">Live demo available</span>}
+                {p.demoUrl && <span className="status-chip">{p.demoLabel ? "Owner sign-in available" : "Live demo available"}</span>}
                 <span className="status-chip">{p.status}</span>
               </span>
             </div>

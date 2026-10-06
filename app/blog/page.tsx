@@ -5,7 +5,7 @@ import { posts } from "@/lib/posts";
 
 export const metadata = pageMetadata(
   "Developer notes",
-  "Build stories from BoardSync and StoreCraft, and the e-commerce experience behind Kean's full-stack projects.",
+  "Build stories from OrderPilot, K3 Billing Tracker, StoreCraft, and BoardSync: the problems and decisions behind Kean's applications.",
   "/blog",
 );
 

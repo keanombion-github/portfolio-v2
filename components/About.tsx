@@ -41,7 +41,7 @@ export function About() {
           <em className="text-[var(--accent)] not-italic">
             PostgreSQL and Supabase
           </em>{" "}
-          tooling tying it together. Two side projects are where that&apos;s
+          tooling tying it together. Practical projects are where that&apos;s
           coming together —
         </p>
 
@@ -64,6 +64,8 @@ export function About() {
             — a merchant dashboard and storefront builder that connects my
             e-commerce background with products, page design, and order workflows.
           </li>
+          <li><strong className="text-[var(--text-bright)]">OrderPilot</strong> — exploring the fulfillment work after checkout: locations, picking, packing, and exceptions.</li>
+          <li><strong className="text-[var(--text-bright)]">K3 Billing Tracker</strong> — built for a friend&apos;s WiFi business to organize subscribers, renewals, and recorded payments.</li>
         </ul>
 
         {/* Current stack */}

@@ -6,12 +6,47 @@ export interface Project {
   role: string;
   status: string;
   demoUrl?: string;
+  demoLabel?: string;
   storySlug?: string;
   screenshots?: { src: string; alt: string; caption: string }[];
   stack: string[];
   sections: { id: string; title: string; body: string }[];
 }
 export const projects: Project[] = [
+  {
+    slug: "orderpilot", title: "OrderPilot", subtitle: "From checkout to fulfillment",
+    summary: "An order-management prototype that follows the work after checkout: assign a location, pick, pack, and ship—with permissions and exceptions built into the journey.",
+    role: "Full-Stack · Order Management", status: "Demo prototype",
+    demoUrl: "https://orderpilot-demo.onrender.com/", storySlug: "orderpilot-the-work-after-checkout",
+    screenshots: [
+      { src: "/projects/orderpilot-workspace.png", alt: "OrderPilot setup dashboard showing locations, users, role scope, and the staff control-panel entry", caption: "Administrator setup brings locations, team access, and workspace settings together." },
+      { src: "/projects/orderpilot-orders.png", alt: "OrderPilot staff dashboard showing seeded orders and fulfillment queues", caption: "The staff control panel shows fictional orders and operational queues in the shared demo." },
+      { src: "/projects/orderpilot-preview.png", alt: "OrderPilot administrator sign-in with public demo credentials and a staff control-panel link", caption: "The public demo separates administrator setup from the staff fulfillment workspace." },
+    ],
+    stack: ["Next.js", "TypeScript", "ASP.NET Core", "SQLite"],
+    sections: [
+      { id: "problem", title: "An order is only the beginning", body: "StoreCraft explores how a merchant builds a shop and a customer places an order. OrderPilot asks what happens next. My experience supporting storefronts and investigating order-management issues gave me a reason to explore the operational side: who fulfills the order, where the stock comes from, and what happens when the normal flow breaks." },
+      { id: "workflow", title: "A workflow the team can follow", body: "The prototype supports location assignment, item picking, packing, delivery with tracking, and pickup readiness. Payment holds, unknown SKUs, and short picks surface as exceptions. An audit timeline records completed actions and the acting user, so the order carries context beyond its current status." },
+      { id: "rules", title: "Putting rules behind the controls", body: "The ASP.NET Core API validates fulfillment transitions and reserves stock in a transaction. Administrators, managers, staff, and viewers have different responsibilities, with access scoped by location. Next.js provides separate setup and staff workspaces. SQLite keeps the prototype small enough to explore while giving the workflow durable local state." },
+      { id: "demo", title: "Explore the demo", body: "Use the sample credentials displayed on the login page to enter the seeded workspace. Explore locations and access settings, then open the staff control panel to inspect fulfillment. This is a shared sandbox with sample records: do not enter personal or real customer data. The free Render service may take a moment to wake up, and changes reset on redeploy or instance replacement." },
+      { id: "next", title: "The next connection", body: "OrderPilot is a standalone prototype; it does not yet exchange live orders with StoreCraft. The next step is a reliable integration with scoped credentials, duplicate-event protection, acknowledgments, retries, and fulfillment updates. Production identity, persistent hosted storage, and broader audit coverage also remain future work." },
+    ],
+  },
+  {
+    slug: "k3-billing-tracker", title: "K3 Billing Tracker", subtitle: "A practical tool for a friend's WiFi business",
+    summary: "Built around a friend's struggle to keep up with payment tracking: a single-owner workspace for subscribers, renewal dates, recorded payments, and outstanding bills.",
+    role: "Full-Stack · Business Tool", status: "Owner-only application",
+    demoUrl: "https://k3-billing-tracker.netlify.app/", demoLabel: "Open owner sign-in", storySlug: "k3-billing-tracker-built-for-a-friend",
+    screenshots: [{ src: "/projects/k3-billing-preview.png", alt: "K3 Billing Tracker sign-in page for the WiFi business owner", caption: "The hosted owner sign-in. Subscriber and payment records remain behind authentication." }],
+    stack: ["Next.js", "TypeScript", ".NET", "PostgreSQL"],
+    sections: [
+      { id: "problem", title: "Starting with someone else's problem", body: "A friend running a local WiFi business was struggling to keep up with payment tracking. I built K3 Billing Tracker around that specific need: make it easier to see who is due, record a payment, and find its history. The scope follows the owner's daily work rather than trying to become a general accounting platform." },
+      { id: "workflow", title: "Subscribers, renewals, and payments together", body: "The app brings customer search, plan selection, daily/weekly/monthly renewal schedules, and payment history into one owner workspace. The dashboard separates collected, expected, and outstanding amounts, alongside due and upcoming renewals. Customer deactivation preserves history instead of removing earlier payments." },
+      { id: "decisions", title: "Small details that affect trust", body: "A payment belongs to an exact renewal due date, with PostgreSQL enforcing one payment per customer per renewal. Monthly dates at the end of a month adapt to shorter months. Outstanding bills and collected payments are calculated separately because a recorded payment can differ from the plan fee. These decisions matter more than a polished total on its own." },
+      { id: "mobile", title: "Designed for the owner's day", body: "The interface includes mobile navigation, touch-sized payment actions, renewal cards, full-screen forms, and light/dark themes. A Next.js frontend connects to a .NET API and PostgreSQL. Optional owner email summaries are implemented, but their delivery depends on provider configuration and a running backend." },
+      { id: "access", title: "A business workspace, not an open sandbox", body: "The hosted link opens the owner's sign-in page. There is no public registration or shared demo account, and the portfolio screenshot deliberately stops before subscriber records. The app records payments; it does not charge customers. Partial balances, refunds, historical subscription snapshots, and a full accounting ledger are outside the current scope. No measured time savings or revenue impact are claimed." },
+    ],
+  },
   {
     slug: "boardsync",
     title: "BoardSync",

@@ -1,6 +1,8 @@
 import { pageMetadata } from "@/lib/metadata";
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
+import { projects } from "@/lib/projects";
 import { notFound } from "next/navigation";
 import ArticleBody from "@/components/ArticleBody";
 import ShareButtons from "@/components/ShareButtons";
@@ -30,6 +32,7 @@ export default async function ArticlePage({
   const { slug } = await params;
   const post = posts.find((item) => item.slug === slug);
   if (!post) notFound();
+  const project = projects.find((item) => item.storySlug === slug);
   const next = posts.find((item) => item.slug !== slug);
   return (
     <div className="page-shell">
@@ -75,6 +78,17 @@ export default async function ArticlePage({
           </div>
         </header>
         <ArticleBody post={post} />
+        {project && (
+          <section className="my-10" aria-label="Explore this project">
+            {project.screenshots?.[0] && (
+              <figure className="mb-6">
+                <Image src={project.screenshots[0].src} alt={project.screenshots[0].alt} width={1440} height={1000} sizes="(max-width: 1200px) 100vw, 1136px" className="h-auto w-full rounded-xl border border-[var(--border)]" />
+                <figcaption className="mt-3 text-sm text-[var(--text-dim)]">{project.screenshots[0].caption}</figcaption>
+              </figure>
+            )}
+            <Link className="button" href={`/project/${project.slug}`}>Explore {project.title} →</Link>
+          </section>
+        )}
         <div className="border-t border-[var(--border)] pt-7">
           <ShareButtons title={post.title} />
         </div>
