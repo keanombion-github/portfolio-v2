@@ -4,7 +4,7 @@ import { ProjectList } from "@/components/ProjectList";
 import { projects } from "@/lib/projects";
 export const metadata = pageMetadata(
   "Projects",
-  "Explore OrderPilot, K3 Billing Tracker, StoreCraft, and BoardSync: commerce, operations, and business workflows.",
+  "Explore ShiftLedger, OrderPilot, K3 Billing Tracker, StoreCraft, and BoardSync: practical business workflows.",
   "/projects",
 );
 export default function ProjectsPage() {

@@ -14,6 +14,25 @@ export interface Project {
 }
 export const projects: Project[] = [
   {
+    slug: "shiftledger", title: "ShiftLedger", subtitle: "Clear attendance before payroll preparation",
+    summary: "An attendance workspace for small teams: review shifts, resolve missing punches, and export approved hours. Separate admin and staff views make the next action clear.",
+    role: "Frontend · Business Operations", status: "Interactive browser demo",
+    demoUrl: "https://shiftledger-demo.netlify.app/", storySlug: "shiftledger-getting-attendance-right",
+    screenshots: [
+      { src: "/projects/shiftledger-overview.png", alt: "ShiftLedger admin overview showing fictional team hours, review progress, and a missing clock-out request", caption: "The admin overview turns fictional attendance records into a review queue and approved-hours summary." },
+      { src: "/projects/shiftledger-attendance.png", alt: "ShiftLedger attendance table with fictional employee shifts, worked hours, and review states", caption: "Attendance records show which hours are approved and which still need attention before export." },
+    ],
+    stack: ["Next.js", "React", "TypeScript", "Tailwind CSS", "Font Awesome"],
+    sections: [
+      { id: "problem", title: "Start with the records people depend on", body: "ShiftLedger began with an idea for a practical attendance and payroll-preparation tool for small businesses. Before calculating pay, a team needs reliable attendance: when someone worked, which breaks were taken, and which records need review. I focused the first milestone on making that workflow visible and understandable." },
+      { id: "workflow", title: "Two views of the same working day", body: "The public demo opens into an admin dashboard for a fictional eight-person business. Explore attendance, schedules, employees, correction approvals, and reports. Switch the demo role to Staff to explore personal attendance and clock/break actions. The role selector demonstrates the interface; it is not a real login or evidence of server-enforced permissions." },
+      { id: "review", title: "Missing information needs a decision", body: "Approved completed shifts contribute to the hours summary and CSV export. Missing punches remain unresolved instead of receiving estimated hours. Reviewing a prepared correction updates the effective attendance and dashboard totals. This makes the report a result of review rather than just a table of raw timestamps." },
+      { id: "design", title: "A dashboard built around attention", body: "Next.js, React, TypeScript, Tailwind CSS, and Font Awesome Free provide the interface. Dark and light themes, team-hour bars, review progress, filters, and responsive tables help people find what needs attention. The goal is to make routine actions understandable, not to bury them under analytics." },
+      { id: "demo", title: "Try the isolated demo", body: "No account is required. Data is fictional and changes are saved in this browser; Reset demo clears local progress. Explore a correction request, approved attendance exports, and the staff clock workflow without changing actual employee records. No real emails or payments are sent, and no actual payroll is calculated." },
+      { id: "next", title: "What comes after the interface", body: "The repository includes a separate ASP.NET Core foundation. Supabase authentication, PostgreSQL persistence, server-timestamped attendance, enforced permissions, locked approvals, and payroll snapshots remain future milestones. ShiftLedger is a portfolio prototype, not production payroll software. The next step is to validate the workflow with a business owner and carry its rules into the backend." },
+    ],
+  },
+  {
     slug: "orderpilot", title: "OrderPilot", subtitle: "From checkout to fulfillment",
     summary: "An order-management prototype that follows the work after checkout: assign a location, pick, pack, and ship—with permissions and exceptions built into the journey.",
     role: "Full-Stack · Order Management", status: "Demo prototype",

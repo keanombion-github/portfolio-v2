@@ -4,6 +4,18 @@ section: projects
 
 # Selected projects
 
+## ShiftLedger - first featured project
+
+An attendance-first interactive browser demo with admin review, staff clock/break
+actions, correction requests, and approved CSV exports.
+
+- Preview: https://shiftledger-demo.netlify.app/
+- Stack: Next.js, React, TypeScript, Tailwind CSS, Font Awesome Free.
+- Story: /blog/shiftledger-getting-attendance-right
+- Fictional data, local browser persistence, and resettable demo progress.
+- The .NET API foundation is separate; Supabase Auth, PostgreSQL, server-enforced
+  permissions, and payroll calculations remain planned.
+
 ## BoardSync - collaborative task organization
 
 A Kanban project exploring columns, cards, assignment, and shared work.

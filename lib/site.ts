@@ -11,7 +11,7 @@ export const site = {
   name: "Kean",
   title: "Kean — Frontend Developer & Full-Stack Builder",
   description:
-    "Kean Ombion builds storefront interfaces and practical full-stack applications. Explore StoreCraft, OrderPilot, BoardSync, and a billing tracker built for a friend's business.",
+    "Kean Ombion builds storefront interfaces and practical applications. Explore ShiftLedger, StoreCraft, OrderPilot, BoardSync, and a billing tracker built for a friend's business.",
   url: publicUrl(process.env.NEXT_PUBLIC_SITE_URL) || "http://localhost:3000",
   email: process.env.NEXT_PUBLIC_CONTACT_EMAIL || "keanombion@gmail.com",
   github: publicUrl(process.env.NEXT_PUBLIC_GITHUB_URL),

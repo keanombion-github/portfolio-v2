@@ -5,7 +5,7 @@ import { posts } from "@/lib/posts";
 
 export const metadata = pageMetadata(
   "Developer notes",
-  "Build stories from OrderPilot, K3 Billing Tracker, StoreCraft, and BoardSync: the problems and decisions behind Kean's applications.",
+  "Build stories from ShiftLedger, OrderPilot, K3 Billing Tracker, StoreCraft, and BoardSync: the decisions behind Kean's applications.",
   "/blog",
 );
 

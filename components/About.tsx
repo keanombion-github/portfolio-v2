@@ -66,6 +66,7 @@ export function About() {
           </li>
           <li><strong className="text-[var(--text-bright)]">OrderPilot</strong> — exploring the fulfillment work after checkout: locations, picking, packing, and exceptions.</li>
           <li><strong className="text-[var(--text-bright)]">K3 Billing Tracker</strong> — built for a friend&apos;s WiFi business to organize subscribers, renewals, and recorded payments.</li>
+          <li><strong className="text-[var(--text-bright)]">ShiftLedger</strong> — an attendance-first browser prototype with admin review, staff clock actions, and approved-hours exports.</li>
         </ul>
 
         {/* Current stack */}

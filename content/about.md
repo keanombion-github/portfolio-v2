@@ -35,6 +35,9 @@ permissions, data, and the workflow it serves.
 
 Read the blog for the stories and decisions behind these projects.
 
+- ShiftLedger is the first featured project: an attendance-first browser prototype
+  with admin/staff demo views, correction review, and CSV exports. Payroll is planned.
+
 - OrderPilot explores fulfillment after checkout, with a seeded standalone OMS demo.
 - K3 Billing Tracker was built for a friend's WiFi business to organize subscribers,
   renewal dates, and payment records. A read-only public demo uses sample data;

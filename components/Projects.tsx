@@ -9,7 +9,7 @@ export function Projects() {
         label="FROM EXPERIENCE TO APPLICATIONS"
         heading="Selected projects"
         path="~/projects/featured"
-        subtitle="From storefronts to fulfillment and payment tracking: practical workflows backed by working applications."
+        subtitle="Attendance, storefronts, fulfillment, and billing: practical workflows you can explore."
       />
       <div className="grid md:grid-cols-2 gap-5">
         {projects.map((p, i) => (

@@ -5,6 +5,10 @@ const paths = [
   "/about",
   "/projects",
   "/project/boardsync",
+  "/project/shiftledger",
+  "/blog/shiftledger-getting-attendance-right",
+  "/projects/shiftledger-overview.png",
+  "/projects/shiftledger-attendance.png",
   "/project/storecraft",
   "/project/orderpilot",
   "/project/k3-billing-tracker",
@@ -33,6 +37,13 @@ for (const path of paths) {
     const html = await response.text();
     assert.match(html, /\/project\/storecraft/);
     assert.doesNotMatch(html, /\/project\/invoice-reminder/);
+    assert.ok(html.indexOf('/project/shiftledger') < html.indexOf('/project/orderpilot'), 'ShiftLedger should appear first');
+  }
+  if (path === "/project/shiftledger") {
+    const html = await response.text();
+    assert.match(html, /https:\/\/shiftledger-demo\.netlify\.app/);
+    assert.match(html, /shiftledger-getting-attendance-right/);
+    assert.match(html, /shiftledger-overview\.png/);
   }
   if (path === "/project/storecraft") {
     const html = await response.text();
