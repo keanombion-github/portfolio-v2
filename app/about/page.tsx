@@ -1,5 +1,6 @@
 import { pageMetadata } from "@/lib/metadata";
 import Link from "next/link";
+import { WorkExperience } from "@/components/WorkExperience";
 
 export const metadata = pageMetadata(
   "About",
@@ -121,6 +122,12 @@ export default function AboutPage() {
           </Link>
         </div>
       </div>
+      <WorkExperience />
+      <section className="mt-20" aria-labelledby="education-title">
+        <p className="eyebrow">EDUCATION</p>
+        <h2 id="education-title" className="mt-3 text-2xl text-[var(--text-bright)]">Bachelor of Science in Computer Science</h2>
+        <p className="mt-3 text-[var(--text-dim)]">DCLC · 2011–2015</p>
+      </section>
       <section className="mt-20" aria-labelledby="journey-title">
         <p className="eyebrow">01 / EXPERIENCE &amp; LEARNING</p>
         <h2

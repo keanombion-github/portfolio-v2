@@ -4,6 +4,20 @@ section: about
 
 # From storefront interfaces to full-stack applications
 
+## Professional experience
+
+- KMC — Front-End Developer, Oct 2021–Present. BigCommerce storefronts from
+  Figma/PSD designs, JavaScript/React Page Builder widgets, REST APIs, SLA-bound
+  live-site support, and Randem Retail OMS troubleshooting on an AWS-backed stack.
+- OOM — Front-End Developer, Mar 2019–Oct 2021. Responsive wireframe/PSD
+  implementation, WordPress enhancements, SEO content updates, and maintenance.
+- Goetu Infotech Solutions Inc. — Front-End Developer / Web Designer,
+  Sep 2017–Mar 2019. Client websites, logo design and database setup, redesigns,
+  maintenance, and reusable website templates.
+- Education: Bachelor of Science in Computer Science, DCLC, 2011–2015.
+
+Employment dates and responsibilities are sourced from the supplied résumé.
+
 My foundation is frontend development: BigCommerce storefronts, design handoffs,
 responsive pages, and maintenance for live client websites. Support and operations
 added SLA tickets, troubleshooting, and AWS-backed workflows to that perspective.

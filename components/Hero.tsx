@@ -16,7 +16,8 @@ export function Hero() {
           Frontend Developer · E-commerce experience · Full-stack projects
         </p>
         <p className="text-[17px] leading-[1.8] max-w-[54ch]">
-          I turn designs into working storefronts, and I&apos;m expanding into{" "}
+          I&apos;ve built and maintained client websites since 2017, including
+          BigCommerce storefronts and custom JavaScript/React widgets. I&apos;m expanding into{" "}
           <em className="text-[var(--text-bright)] not-italic">full-stack</em>:
           React and Next.js on the frontend, .NET and PostgreSQL behind it.
           BigCommerce work and support for live websites taught me to care
