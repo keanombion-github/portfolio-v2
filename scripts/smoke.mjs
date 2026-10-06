@@ -12,6 +12,7 @@ const paths = [
   "/blog/k3-billing-tracker-built-for-a-friend",
   "/projects/orderpilot-preview.png",
   "/projects/k3-billing-preview.png",
+  "/projects/k3-billing-dashboard.png",
   "/blog/storecraft-from-storefronts-to-store-builder",
   "/blog/boardsync-making-work-visible",
   "/blog/from-storefront-work-to-full-stack-projects",

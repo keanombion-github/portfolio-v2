@@ -35,16 +35,19 @@ export const projects: Project[] = [
   {
     slug: "k3-billing-tracker", title: "K3 Billing Tracker", subtitle: "A practical tool for a friend's WiFi business",
     summary: "Built around a friend's struggle to keep up with payment tracking: a single-owner workspace for subscribers, renewal dates, recorded payments, and outstanding bills.",
-    role: "Full-Stack · Business Tool", status: "Owner-only application",
-    demoUrl: "https://k3-billing-tracker.netlify.app/", demoLabel: "Open owner sign-in", storySlug: "k3-billing-tracker-built-for-a-friend",
-    screenshots: [{ src: "/projects/k3-billing-preview.png", alt: "K3 Billing Tracker sign-in page for the WiFi business owner", caption: "The hosted owner sign-in. Subscriber and payment records remain behind authentication." }],
+    role: "Full-Stack · Business Tool", status: "Business tool · Public demo",
+    demoUrl: "https://k3-billing-tracker.netlify.app/", storySlug: "k3-billing-tracker-built-for-a-friend",
+    screenshots: [
+      { src: "/projects/k3-billing-dashboard.png", alt: "K3 Billing Tracker read-only demo dashboard with sample renewal counts, monthly collections, due accounts, and recent payments", caption: "The public read-only dashboard uses sample customers and payments. These figures are demo data, not the business's results." },
+      { src: "/projects/k3-billing-preview.png", alt: "K3 Billing Tracker sign-in page with a View demo button", caption: "Visitors can choose View demo without signing into the private owner workspace." },
+    ],
     stack: ["Next.js", "TypeScript", ".NET", "PostgreSQL"],
     sections: [
       { id: "problem", title: "Starting with someone else's problem", body: "A friend running a local WiFi business was struggling to keep up with payment tracking. I built K3 Billing Tracker around that specific need: make it easier to see who is due, record a payment, and find its history. The scope follows the owner's daily work rather than trying to become a general accounting platform." },
       { id: "workflow", title: "Subscribers, renewals, and payments together", body: "The app brings customer search, plan selection, daily/weekly/monthly renewal schedules, and payment history into one owner workspace. The dashboard separates collected, expected, and outstanding amounts, alongside due and upcoming renewals. Customer deactivation preserves history instead of removing earlier payments." },
       { id: "decisions", title: "Small details that affect trust", body: "A payment belongs to an exact renewal due date, with PostgreSQL enforcing one payment per customer per renewal. Monthly dates at the end of a month adapt to shorter months. Outstanding bills and collected payments are calculated separately because a recorded payment can differ from the plan fee. These decisions matter more than a polished total on its own." },
       { id: "mobile", title: "Designed for the owner's day", body: "The interface includes mobile navigation, touch-sized payment actions, renewal cards, full-screen forms, and light/dark themes. A Next.js frontend connects to a .NET API and PostgreSQL. Optional owner email summaries are implemented, but their delivery depends on provider configuration and a running backend." },
-      { id: "access", title: "A business workspace, not an open sandbox", body: "The hosted link opens the owner's sign-in page. There is no public registration or shared demo account, and the portfolio screenshot deliberately stops before subscriber records. The app records payments; it does not charge customers. Partial balances, refunds, historical subscription snapshots, and a full accounting ledger are outside the current scope. No measured time savings or revenue impact are claimed." },
+      { id: "access", title: "Explore the workflow with sample data", body: "Choose View demo on the sign-in page to explore a read-only workspace with sample customers and payments. You can inspect the billing overview, customer directory, and payment history without owner credentials. Actual owner records remain private. The app records payments; it does not charge customers. Partial balances, refunds, historical subscription snapshots, and a full accounting ledger are outside the current scope. Demo totals are fictional, and no measured time savings or revenue impact are claimed." },
     ],
   },
   {

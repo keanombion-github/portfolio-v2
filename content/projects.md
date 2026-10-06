@@ -38,10 +38,11 @@ A seeded OMS prototype for location assignment, picking, packing, shipping, and 
 ## K3 Billing Tracker - a friend's business workflow
 
 Built for a friend's WiFi business to address payment-tracking struggles.
-- Hosted owner sign-in: https://k3-billing-tracker.netlify.app/
+- Preview: https://k3-billing-tracker.netlify.app/ — choose View demo.
 - Stack: Next.js, TypeScript, .NET, PostgreSQL.
 - Story: /blog/k3-billing-tracker-built-for-a-friend
 - Subscribers, daily/weekly/monthly renewals, payment history, and mobile layouts.
-- Owner-only access. Records payments without charging customers.
+- Public read-only demo uses sample customers and payments; owner records stay private.
+- Records payments without charging customers.
 
 No live payment processing, measured commercial outcomes, or connected OMS are claimed.
