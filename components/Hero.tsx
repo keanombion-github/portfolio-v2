@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { StatusBadge } from "./StatusBadge";
 import { ChatWidget } from "./ChatWidget";
-import { socialLinks } from "@/lib/site";
+import { site, socialLinks } from "@/lib/site";
 export function Hero() {
   return (
     <section id="top" className="hero-grid">
@@ -34,12 +34,17 @@ export function Hero() {
           <Link className="button" href="/#projects">
             <span className="text-[var(--text-faint)]">$</span> ls projects/
           </Link>
+          <a className="button" href={site.resume} target="_blank" rel="noopener noreferrer">
+            View résumé (PDF) ↗
+          </a>
+        </div>
+        <div className="mt-5 flex flex-wrap gap-4" aria-label="Professional profiles and email">
           {socialLinks.map((l) => (
             <a
               key={l.label}
-              className="text-xs font-mono text-[var(--text-dim)] hover:text-[var(--accent)]"
+              className="inline-flex min-h-11 items-center font-mono text-sm text-[var(--text-bright)] hover:text-[var(--accent)]"
               href={l.href}
-              target={l.label === "email" ? undefined : "_blank"}
+              target={l.label === "Email" ? undefined : "_blank"}
               rel="noopener noreferrer"
             >
               {l.label} ↗

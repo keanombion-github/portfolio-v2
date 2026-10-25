@@ -40,6 +40,7 @@ export function Contact() {
     }
   }
   const links = [
+    { label: "Résumé (PDF)", href: site.resume },
     { label: "GitHub", href: site.github },
     { label: "LinkedIn", href: site.linkedin },
     { label: "Book a conversation", href: site.booking },

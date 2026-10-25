@@ -2,6 +2,7 @@ import assert from "node:assert/strict";
 const base = process.env.TEST_BASE_URL || "http://127.0.0.1:3000";
 const paths = [
   "/",
+  "/resume/Kean_Ombion_Resume.pdf",
   "/about",
   "/projects",
   "/project/boardsync",
@@ -35,6 +36,18 @@ const paths = [
 for (const path of paths) {
   const response = await fetch(base + path);
   assert.equal(response.status, 200, path);
+  if (path === "/") {
+    const html = await response.text();
+    assert.match(html, /href="\/resume\/Kean_Ombion_Resume\.pdf"/);
+    assert.match(html, /href="https:\/\/github\.com\/keanombion-github\/?"/);
+    assert.match(html, /href="https:\/\/www\.linkedin\.com\/in\/kean-ombion-954769235\/?"/);
+    for (const image of ['shiftledger-overview.png', 'orderpilot-workspace.png', 'k3-billing-dashboard.png', 'boardsync-board.png', 'storecraft-dashboard.png', 'legacy-portfolio.png'])
+      assert.ok(html.includes(image), `Homepage preview missing: ${image}`);
+  }
+  if (path.endsWith('.pdf')) {
+    assert.match(response.headers.get('content-type') || '', /application\/pdf/);
+    assert.equal(Buffer.from(await response.arrayBuffer()).subarray(0, 5).toString(), '%PDF-');
+  }
   if (path === "/projects") {
     const html = await response.text();
     assert.match(html, /\/project\/storecraft/);

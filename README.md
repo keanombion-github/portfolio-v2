@@ -37,7 +37,7 @@ Copy `.env.example` to `.env.local` for local development and fill only the serv
 | `GEMINI_API_KEY`            | Optional server-only Gemini key                                                 |
 | `GEMINI_MODEL`              | A currently supported model available to your Google AI Studio project          |
 
-No credentials are included. Empty social URLs are omitted from the page instead of pointing to someone else's profile. The public Gmail address is a direct fallback if a visitor cannot submit a form.
+No credentials are included. GitHub and LinkedIn default to Kean's confirmed public profiles when their settings are empty or invalid. Booking remains optional. The public Gmail address is a direct fallback if a visitor cannot submit a form. The introduction and contact section link to `public/resume/Kean_Ombion_Resume.pdf`, copied from the latest supplied résumé; replace that file when the résumé changes. Homepage cards reuse the first screenshot from each project in `lib/projects.ts`.
 
 ## Chat modes
 

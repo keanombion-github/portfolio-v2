@@ -14,7 +14,7 @@ export function Footer() {
         <a href="/rss.xml">/rss.xml</a>
         <a href="/sitemap.xml">/sitemap.xml</a>
         {socialLinks
-          .filter((l) => l.label !== "email")
+          .filter((l) => !l.href.startsWith("mailto:"))
           .map((l) => (
             <a
               key={l.label}

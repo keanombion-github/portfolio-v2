@@ -12,3 +12,7 @@ storefronts, order fulfillment, and practical business tools. BigCommerce work a
 how I think about interfaces, data, and the people using them.
 
 Contact: keanombion@gmail.com
+
+Résumé: /resume/Kean_Ombion_Resume.pdf
+GitHub: https://github.com/keanombion-github
+LinkedIn: https://www.linkedin.com/in/kean-ombion-954769235/

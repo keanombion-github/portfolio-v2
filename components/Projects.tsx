@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { projects } from "@/lib/projects";
 import { SectionHeader } from "./SectionHeader";
 export function Projects() {
@@ -25,6 +26,17 @@ export function Projects() {
                 <span className="status-chip">{p.status}</span>
               </span>
             </div>
+            {p.screenshots?.[0] && (
+              <div className="relative mt-6 aspect-video overflow-hidden rounded-lg border border-[var(--border)] bg-[var(--surface)]">
+                <Image
+                  src={p.screenshots[0].src}
+                  alt={p.screenshots[0].alt}
+                  fill
+                  sizes="(max-width: 767px) 100vw, (max-width: 1200px) 50vw, 540px"
+                  className="object-cover object-top"
+                />
+              </div>
+            )}
             <h3 className="font-mono text-2xl text-[var(--text-bright)] mt-7 mb-2 group-hover:text-[var(--accent)] transition-colors">
               {p.title}{" "}
               <span className="float-right text-lg opacity-0 group-hover:opacity-100 transition-opacity">

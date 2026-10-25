@@ -14,12 +14,13 @@ export const site = {
     "Kean Ombion builds storefront interfaces and practical applications. Explore ShiftLedger, StoreCraft, OrderPilot, BoardSync, and a billing tracker built for a friend's business.",
   url: publicUrl(process.env.NEXT_PUBLIC_SITE_URL) || "http://localhost:3000",
   email: process.env.NEXT_PUBLIC_CONTACT_EMAIL || "keanombion@gmail.com",
-  github: publicUrl(process.env.NEXT_PUBLIC_GITHUB_URL),
-  linkedin: publicUrl(process.env.NEXT_PUBLIC_LINKEDIN_URL),
+  github: publicUrl(process.env.NEXT_PUBLIC_GITHUB_URL) || "https://github.com/keanombion-github",
+  linkedin: publicUrl(process.env.NEXT_PUBLIC_LINKEDIN_URL) || "https://www.linkedin.com/in/kean-ombion-954769235/",
+  resume: "/resume/Kean_Ombion_Resume.pdf",
   booking: publicUrl(process.env.NEXT_PUBLIC_BOOKING_URL),
 };
 export const socialLinks = [
-  { label: "github", href: site.github },
-  { label: "linkedin", href: site.linkedin },
-  { label: "email", href: site.email ? `mailto:${site.email}` : "" },
+  { label: "GitHub", href: site.github },
+  { label: "LinkedIn", href: site.linkedin },
+  { label: "Email", href: site.email ? `mailto:${site.email}` : "" },
 ].filter((link) => link.href);
