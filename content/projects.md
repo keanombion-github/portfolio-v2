@@ -4,6 +4,14 @@ section: projects
 
 # Selected projects
 
+## Earlier portfolio - visual frontend reference
+
+- URL: https://react-portfolio-480d8.web.app/
+- Current project page: /project/earlier-portfolio
+- Kept last, preserving ShiftLedger as the first featured project.
+- Shows website template previews and an earlier visual direction. Copy may be outdated;
+  use the current portfolio for current experience and project status.
+
 ## ShiftLedger - first featured project
 
 An attendance-first interactive browser demo with admin review, staff clock/break

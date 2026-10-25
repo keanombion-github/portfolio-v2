@@ -160,4 +160,21 @@ export const projects: Project[] = [
       },
     ],
   },
+  {
+    slug: "earlier-portfolio",
+    title: "Earlier Portfolio",
+    subtitle: "A look at my frontend design foundation",
+    summary: "My earlier personal portfolio, featuring website templates, responsive page design, and a more expressive visual style. A reference point for how my work has evolved.",
+    role: "Frontend · Personal Website",
+    status: "Earlier work",
+    demoUrl: "https://react-portfolio-480d8.web.app/",
+    demoLabel: "Visit earlier portfolio",
+    stack: ["React", "CSS", "JavaScript"],
+    screenshots: [{ src: "/projects/legacy-portfolio.png", alt: "Kean's earlier portfolio with a purple-accented introduction, About section, website template previews, and technology icons", caption: "The earlier portfolio emphasizes visual presentation and website templates. Its biography and experience counts reflect that version." }],
+    sections: [
+      { id: "starting-point", title: "Where this version fits", body: "This earlier portfolio presents my frontend work through a personal introduction, an About section, technology icons, and website template previews. It includes TechnoLand, Advance, and Evention, giving visitors another view of the page design and presentation work behind my current projects." },
+      { id: "progression", title: "From presenting pages to explaining workflows", body: "The earlier site puts visual identity first. My current portfolio adds employment history, project walkthroughs, screenshots, and build stories so visitors can understand the problems I am exploring and the decisions behind each application. Together, the two versions show a progression from website presentation toward practical business workflows." },
+      { id: "archive", title: "An earlier snapshot", body: "The linked site is an earlier version, not a second current résumé. Its copy, experience counts, and project information may be outdated. Use this portfolio for my current background and project status. The older site is included as a visual reference; its individual project links and contact flows have not been comprehensively retested." },
+    ],
+  },
 ];

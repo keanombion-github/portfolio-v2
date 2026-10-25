@@ -6,6 +6,8 @@ const paths = [
   "/projects",
   "/project/boardsync",
   "/project/shiftledger",
+  "/project/earlier-portfolio",
+  "/projects/legacy-portfolio.png",
   "/blog/shiftledger-getting-attendance-right",
   "/projects/shiftledger-overview.png",
   "/projects/shiftledger-attendance.png",

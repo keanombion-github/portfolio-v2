@@ -21,7 +21,7 @@ export function Projects() {
             <div className="flex justify-between font-mono text-xs">
               <span className="text-[var(--accent)]">[0{i + 1}]</span>
               <span className="flex flex-wrap justify-end gap-2">
-                {p.demoUrl && <span className="status-chip">{p.demoLabel ? "Owner sign-in available" : "Live demo available"}</span>}
+                {p.demoUrl && <span className="status-chip">{p.demoLabel || "Live demo available"}</span>}
                 <span className="status-chip">{p.status}</span>
               </span>
             </div>
