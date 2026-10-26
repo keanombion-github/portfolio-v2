@@ -54,11 +54,11 @@ export default function RootLayout({
           <a href="#main-content" className="skip-link">
             Skip to content
           </a>
-          <CursorTrail />
           <div
             className="fixed inset-0 bg-vignette pointer-events-none z-0"
             aria-hidden="true"
           />
+          <CursorTrail />
           <Navbar />
           <main id="main-content" className="site-main">
             {children}

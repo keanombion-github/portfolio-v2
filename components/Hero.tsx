@@ -5,7 +5,7 @@ import { site, socialLinks } from "@/lib/site";
 export function Hero() {
   return (
     <section id="top" className="hero-grid">
-      <div className="hero-copy">
+      <div className="hero-copy motion-text-surface">
         <StatusBadge />
         <h1 className="hero-title">
           <span className="text-[var(--text-faint)] font-light">$ </span>hi,

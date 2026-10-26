@@ -39,6 +39,14 @@ Copy `.env.example` to `.env.local` for local development and fill only the serv
 
 No credentials are included. GitHub and LinkedIn default to Kean's confirmed public profiles when their settings are empty or invalid. Booking remains optional. The public Gmail address is a direct fallback if a visitor cannot submit a form. The introduction and contact section link to `public/resume/Kean_Ombion_Resume.pdf`, copied from the latest supplied résumé; replace that file when the résumé changes. Homepage cards reuse the first screenshot from each project in `lib/projects.ts`.
 
+## Portfolio motion
+
+The dot field uses a wider pointer spotlight with larger highlighted dots. Pointer tracking is limited to fine mouse pointers, stops when idle, and fades on exit or blur. Homepage experience/contact sections and project cards reveal once as they enter the viewport; the server-rendered content is readable without JavaScript. Cards add a small pointer tilt, localized glow, and screenshot zoom without changing their destinations.
+
+Reduced-motion preferences disable tracking, reveal animations, tilt, and zoom, including when changed during a visit. Touch devices keep natural scrolling and static previews. Motion uses browser APIs rather than an animation dependency.
+
+Optional interaction checks: `node scripts/test-motion.cjs` against a production server on port 3002 (override with `TEST_BASE_URL`). This browser check requires Playwright available to Node and installed Chrome. The Codex bundled runtime can provide Playwright via `NODE_PATH`; it is not required by the deployed application. Checks cover pointer motion, scroll entry, reduced-motion changes, keyboard navigation, touch layout, and no-JavaScript content.
+
 ## Chat modes
 
 With no Gemini configuration, answers come from `lib/chat.ts`. This deterministic portfolio FAQ has no model API cost and also works as a browser-side fallback if the server is unreachable. It does not pretend to be a general-purpose AI.

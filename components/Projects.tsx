@@ -2,6 +2,8 @@ import Link from "next/link";
 import Image from "next/image";
 import { projects } from "@/lib/projects";
 import { SectionHeader } from "./SectionHeader";
+import { ScrollReveal } from "./ScrollReveal";
+import { ProjectMotionLink } from "./ProjectMotionLink";
 export function Projects() {
   return (
     <section className="section-shell" id="projects">
@@ -14,11 +16,8 @@ export function Projects() {
       />
       <div className="grid md:grid-cols-2 gap-5">
         {projects.map((p, i) => (
-          <Link
-            href={`/project/${p.slug}`}
-            className="project-card group"
-            key={p.slug}
-          >
+          <ScrollReveal key={p.slug} delay={(i % 2) * 85} className="h-full">
+          <ProjectMotionLink href={`/project/${p.slug}`}>
             <div className="flex justify-between font-mono text-xs">
               <span className="text-[var(--accent)]">[0{i + 1}]</span>
               <span className="flex flex-wrap justify-end gap-2">
@@ -33,13 +32,13 @@ export function Projects() {
                   alt={p.screenshots[0].alt}
                   fill
                   sizes="(max-width: 767px) 100vw, (max-width: 1200px) 50vw, 540px"
-                  className="object-cover object-top"
+                  className="project-preview object-cover object-top"
                 />
               </div>
             )}
-            <h3 className="font-mono text-2xl text-[var(--text-bright)] mt-7 mb-2 group-hover:text-[var(--accent)] transition-colors">
+            <h3 className="font-mono text-2xl text-[var(--text-bright)] mt-7 mb-2 group-hover:text-[var(--accent)] group-focus-visible:text-[var(--accent)] transition-colors">
               {p.title}{" "}
-              <span className="float-right text-lg opacity-0 group-hover:opacity-100 transition-opacity">
+              <span className="float-right text-lg opacity-0 group-hover:opacity-100 group-focus-visible:opacity-100 transition-opacity">
                 ↗
               </span>
             </h3>
@@ -54,7 +53,8 @@ export function Projects() {
                 </span>
               ))}
             </div>
-          </Link>
+          </ProjectMotionLink>
+          </ScrollReveal>
         ))}
       </div>
       <div className="flex justify-between items-center border-t border-dashed border-[var(--border)] mt-9 pt-6 font-mono text-xs">

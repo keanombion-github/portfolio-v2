@@ -14,7 +14,7 @@ export function SectionHeader({
   subtitle,
 }: SectionHeaderProps) {
   return (
-    <div className="flex items-baseline justify-between gap-6 mb-9 pb-5 border-b border-[var(--border)]">
+    <div className="motion-text-surface flex items-baseline justify-between gap-6 mb-9 pb-5 border-b border-[var(--border)]">
       <div>
         <div className="font-[family-name:var(--font-mono)] text-[12px] text-[var(--text-dim)] tracking-[0.05em]">
           <span className="text-[var(--accent)] mr-2">{number}</span>
