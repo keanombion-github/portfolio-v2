@@ -325,6 +325,9 @@ textarea::placeholder {
 .project-preview {
   transition: transform 600ms cubic-bezier(0.22, 1, 0.36, 1);
 }
+.project-arrow {
+  transition: opacity 220ms, transform 320ms;
+}
 .cursor-dots-base,
 .cursor-dots-spotlight {
   position: fixed;
@@ -366,13 +369,16 @@ textarea::placeholder {
   .project-card:hover {
     border-color: var(--accent);
     box-shadow: 0 18px 45px var(--accent-dim);
-    transform: perspective(1000px) translateY(-6px) rotateX(var(--card-rotate-x, 0deg)) rotateY(var(--card-rotate-y, 0deg));
+    transform: perspective(1000px) translateY(-8px) rotateX(var(--card-rotate-x, 0deg)) rotateY(var(--card-rotate-y, 0deg));
   }
   .project-card:hover::after {
     opacity: 1;
   }
   .project-card:hover .project-preview {
-    transform: scale(1.035);
+    transform: scale(1.055);
+  }
+  .project-card:hover .project-arrow {
+    transform: translate(3px, -3px);
   }
 }
 @media (hover: none), (pointer: coarse), (prefers-reduced-motion: reduce) {

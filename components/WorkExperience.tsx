@@ -1,16 +1,18 @@
 import { experience } from "@/lib/experience";
+import { ScrollReveal } from "./ScrollReveal";
 
 export function WorkExperience() {
   return (
     <section id="experience" className="section-shell py-16" aria-labelledby="experience-heading">
-      <div className="motion-text-surface">
+      <ScrollReveal className="motion-text-surface">
       <p className="eyebrow">01 / PROFESSIONAL EXPERIENCE</p>
       <h2 id="experience-heading" className="mt-3 mb-5 font-mono text-3xl text-[var(--text-bright)]">The work behind the projects.</h2>
       <p className="max-w-2xl mb-9 leading-7">Building and maintaining client websites since 2017—from design handoffs and storefront launches to the support work that keeps them running.</p>
-      </div>
+      </ScrollReveal>
       <div className="grid gap-5">
-        {experience.map((job) => (
-          <article key={job.company} className="rounded-xl border border-[var(--border)] bg-[var(--surface)] p-6 sm:p-8">
+        {experience.map((job, index) => (
+          <ScrollReveal key={job.company} delay={index * 80}>
+          <article className="rounded-xl border border-[var(--border)] bg-[var(--surface)] p-6 sm:p-8">
             <div className="flex flex-wrap items-start justify-between gap-3">
               <div>
                 <h3 className="font-mono text-xl text-[var(--text-bright)]">{job.company}</h3>
@@ -22,6 +24,7 @@ export function WorkExperience() {
               {job.responsibilities.map((item) => <li key={item}>{item}</li>)}
             </ul>
           </article>
+          </ScrollReveal>
         ))}
       </div>
     </section>

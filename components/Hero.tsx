@@ -2,19 +2,25 @@ import Link from "next/link";
 import { StatusBadge } from "./StatusBadge";
 import { ChatWidget } from "./ChatWidget";
 import { site, socialLinks } from "@/lib/site";
+import { ScrollReveal } from "./ScrollReveal";
 export function Hero() {
   return (
     <section id="top" className="hero-grid">
       <div className="hero-copy motion-text-surface">
-        <StatusBadge />
+        <ScrollReveal><StatusBadge /></ScrollReveal>
+        <ScrollReveal delay={90}>
         <h1 className="hero-title">
           <span className="text-[var(--text-faint)] font-light">$ </span>hi,
           I&apos;m <span className="text-[var(--accent)]">Kean</span>
           <span className="terminal-cursor" aria-hidden="true" />
         </h1>
+        </ScrollReveal>
+        <ScrollReveal delay={170}>
         <p className="font-mono text-sm text-[var(--text-dim)] mb-7">
           Frontend Developer · E-commerce experience · Full-stack projects
         </p>
+        </ScrollReveal>
+        <ScrollReveal delay={250}>
         <p className="text-[17px] leading-[1.8] max-w-[54ch]">
           I&apos;ve built and maintained client websites since 2017, including
           BigCommerce storefronts and custom JavaScript/React widgets. I&apos;m expanding into{" "}
@@ -27,6 +33,8 @@ export function Hero() {
             and practical tools for business owners.
           </span>
         </p>
+        </ScrollReveal>
+        <ScrollReveal delay={330}>
         <div className="flex flex-wrap items-center gap-3 mt-9">
           <Link className="button button-primary" href="/#contact">
             → get in touch
@@ -38,6 +46,8 @@ export function Hero() {
             View résumé (PDF) ↗
           </a>
         </div>
+        </ScrollReveal>
+        <ScrollReveal delay={410}>
         <div className="mt-5 flex flex-wrap gap-4" aria-label="Professional profiles and email">
           {socialLinks.map((l) => (
             <a
@@ -51,8 +61,9 @@ export function Hero() {
             </a>
           ))}
         </div>
+        </ScrollReveal>
       </div>
-      <ChatWidget />
+      <ScrollReveal delay={220} className="h-full [&>div]:h-full"><ChatWidget /></ScrollReveal>
     </section>
   );
 }

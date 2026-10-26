@@ -41,7 +41,7 @@ No credentials are included. GitHub and LinkedIn default to Kean's confirmed pub
 
 ## Portfolio motion
 
-The dot field uses a wider pointer spotlight with larger highlighted dots. Pointer tracking is limited to fine mouse pointers, stops when idle, and fades on exit or blur. Homepage experience/contact sections and project cards reveal once as they enter the viewport; the server-rendered content is readable without JavaScript. Cards add a small pointer tilt, localized glow, and screenshot zoom without changing their destinations.
+The dot field uses a wider pointer spotlight with larger highlighted dots. Pointer tracking is limited to fine mouse pointers, stops when idle, and fades on exit or blur. The introduction enters in stages; experience entries, section headings, and project cards reveal individually once they enter the viewport. Reveals travel 48px over one second and start farther inside the viewport so the sequence is noticeable during normal scrolling. Server-rendered content is readable without JavaScript. Cards add pointer tilt, localized glow, screenshot zoom, and arrow movement without changing their destinations.
 
 Reduced-motion preferences disable tracking, reveal animations, tilt, and zoom, including when changed during a visit. Touch devices keep natural scrolling and static previews. Motion uses browser APIs rather than an animation dependency.
 

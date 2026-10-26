@@ -10,6 +10,8 @@ const base = process.env.TEST_BASE_URL || 'http://127.0.0.1:3002';
     const context = await browser.newContext({ viewport: { width: 1440, height: 1000 }, colorScheme: 'dark' });
     const page = await context.newPage();
     await page.goto(base);
+    assert.ok(await page.locator('#top [data-reveal]').count() >= 4, 'Introduction has a staged entrance');
+    assert.ok(await page.locator('#experience article').locator('..').evaluateAll(elements => elements.every(el => el.hasAttribute('data-reveal'))), 'Experience cards reveal individually');
     const dots = page.locator('.cursor-dots-spotlight');
     await dots.waitFor();
     await page.mouse.move(220, 200);

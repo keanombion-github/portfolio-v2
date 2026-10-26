@@ -29,10 +29,10 @@ export function ScrollReveal({ children, className, delay = 0 }: {
         observer?.disconnect();
         // Animate on entry; never hide server-rendered content while waiting for JS.
         animation.current = el.animate(
-          [{ opacity: 0, transform: "translateY(28px)" }, { opacity: 1, transform: "translateY(0)" }],
-          { duration: 650, delay, easing: "cubic-bezier(0.22, 1, 0.36, 1)", fill: "backwards" },
+          [{ opacity: 0, transform: "translateY(48px) scale(0.985)" }, { opacity: 1, transform: "translateY(0) scale(1)" }],
+          { duration: 1000, delay, easing: "cubic-bezier(0.2, 0.7, 0.2, 1)", fill: "backwards" },
         );
-      }, { threshold: 0.08, rootMargin: "0px 0px -24px 0px" });
+      }, { threshold: 0.16, rootMargin: "0px 0px -64px 0px" });
       observer.observe(el);
     }
     setup();

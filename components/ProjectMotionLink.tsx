@@ -34,8 +34,8 @@ export function ProjectMotionLink({ href, children }: { href: string; children: 
       const rect = el.getBoundingClientRect();
       const x = Math.max(0, Math.min(1, (clientX - rect.left) / rect.width));
       const y = Math.max(0, Math.min(1, (clientY - rect.top) / rect.height));
-      el.style.setProperty("--card-rotate-x", `${(0.5 - y) * 4}deg`);
-      el.style.setProperty("--card-rotate-y", `${(x - 0.5) * 4}deg`);
+      el.style.setProperty("--card-rotate-x", `${(0.5 - y) * 6}deg`);
+      el.style.setProperty("--card-rotate-y", `${(x - 0.5) * 6}deg`);
       el.style.setProperty("--card-x", `${x * 100}%`);
       el.style.setProperty("--card-y", `${y * 100}%`);
     });

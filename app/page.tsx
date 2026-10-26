@@ -10,7 +10,7 @@ export default function Home() {
   return (
     <>
       <Hero />
-      <ScrollReveal><WorkExperience /></ScrollReveal>
+      <WorkExperience />
       <Projects />
       <ScrollReveal><Contact /></ScrollReveal>
     </>

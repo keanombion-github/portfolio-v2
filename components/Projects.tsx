@@ -7,6 +7,7 @@ import { ProjectMotionLink } from "./ProjectMotionLink";
 export function Projects() {
   return (
     <section className="section-shell" id="projects">
+      <ScrollReveal>
       <SectionHeader
         number="02"
         label="FROM EXPERIENCE TO APPLICATIONS"
@@ -14,9 +15,10 @@ export function Projects() {
         path="~/projects/featured"
         subtitle="Attendance, storefronts, fulfillment, and billing: practical workflows you can explore."
       />
+      </ScrollReveal>
       <div className="grid md:grid-cols-2 gap-5">
         {projects.map((p, i) => (
-          <ScrollReveal key={p.slug} delay={(i % 2) * 85} className="h-full">
+          <ScrollReveal key={p.slug} delay={(i % 2) * 150} className="h-full">
           <ProjectMotionLink href={`/project/${p.slug}`}>
             <div className="flex justify-between font-mono text-xs">
               <span className="text-[var(--accent)]">[0{i + 1}]</span>
@@ -38,7 +40,7 @@ export function Projects() {
             )}
             <h3 className="font-mono text-2xl text-[var(--text-bright)] mt-7 mb-2 group-hover:text-[var(--accent)] group-focus-visible:text-[var(--accent)] transition-colors">
               {p.title}{" "}
-              <span className="float-right text-lg opacity-0 group-hover:opacity-100 group-focus-visible:opacity-100 transition-opacity">
+              <span className="project-arrow float-right text-lg opacity-0 group-hover:opacity-100 group-focus-visible:opacity-100 transition-opacity">
                 ↗
               </span>
             </h3>
