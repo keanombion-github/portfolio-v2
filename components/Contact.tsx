@@ -56,8 +56,17 @@ export function Contact() {
       <div className="grid gap-8 md:grid-cols-[0.9fr_1.1fr] md:gap-14">
         <div>
           <p className="max-w-sm text-[15px] leading-relaxed text-[var(--text)]">
-            Have a project in mind, a role to discuss, or just want to say
-            hello? I&apos;d love to hear what you&apos;re working on.
+            Hiring remotely or need help with a website? I&apos;m based in the
+            Philippines and open to frontend roles and freelance projects.
+            Share the scope, timeline, and any timezone overlap you need.
+          </p>
+          <ul className="mt-5 max-w-sm list-disc space-y-2 pl-5 text-sm leading-6">
+            <li>BigCommerce storefront improvements and custom widgets</li>
+            <li>Responsive pages from Figma or PSD designs</li>
+            <li>Frontend fixes, API integration, and ongoing website support</li>
+          </ul>
+          <p className="mt-4 max-w-sm text-xs leading-6 text-[var(--text-dim)]">
+            We can confirm availability, scope, and rates together.
           </p>
           <p className="mt-5 font-[family-name:var(--font-mono)] text-xs leading-relaxed text-[var(--text-dim)]">
             React / Next.js · .NET

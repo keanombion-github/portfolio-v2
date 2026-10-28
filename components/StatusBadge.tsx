@@ -6,7 +6,7 @@ export function StatusBadge() {
         style={{ width: 7, height: 7 }}
         aria-hidden="true"
       />
-      <span>AVAILABLE · open to freelance &amp; full-time</span>
+      <span>REMOTE · open to roles &amp; freelance</span>
     </div>
   );
 }

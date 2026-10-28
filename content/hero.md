@@ -4,12 +4,18 @@ section: hero
 
 # Hi, I'm Kean
 
-Frontend Developer - E-commerce experience - Full-stack projects
+Frontend Developer - BigCommerce - React / Next.js
 
-I have built and maintained client websites since 2017, including BigCommerce
-storefronts and custom JavaScript/React widgets. I extend that experience through
-storefronts, order fulfillment, and practical business tools. BigCommerce work and support for live websites inform
-how I think about interfaces, data, and the people using them.
+Based in the Philippines. Open to remote roles and freelance projects;
+availability, scope, rates, and timezone overlap are confirmed per opportunity.
+
+I have built and maintained client websites since 2017. Professional work includes
+BigCommerce storefronts, Figma-to-code delivery, JavaScript/React widgets, REST APIs,
+and live-site support. Portfolio projects extend that foundation with React,
+Next.js, .NET, and PostgreSQL.
+
+Freelance scope: BigCommerce improvements and widgets; responsive pages from
+Figma/PSD; frontend fixes, API integration, and ongoing website support.
 
 Contact: keanombion@gmail.com
 

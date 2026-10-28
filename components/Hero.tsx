@@ -17,20 +17,21 @@ export function Hero() {
         </ScrollReveal>
         <ScrollReveal delay={170}>
         <p className="font-mono text-sm text-[var(--text-dim)] mb-7">
-          Frontend Developer · E-commerce experience · Full-stack projects
+          Frontend Developer · BigCommerce · React / Next.js
+        </p>
+        <p className="mb-6 text-sm leading-6 text-[var(--text-dim)]">
+          Based in the Philippines · Open to remote work
         </p>
         </ScrollReveal>
         <ScrollReveal delay={250}>
         <p className="text-[17px] leading-[1.8] max-w-[54ch]">
-          I&apos;ve built and maintained client websites since 2017, including
-          BigCommerce storefronts and custom JavaScript/React widgets. I&apos;m expanding into{" "}
-          <em className="text-[var(--text-bright)] not-italic">full-stack</em>:
-          React and Next.js on the frontend, .NET and PostgreSQL behind it.
-          BigCommerce work and support for live websites taught me to care
-          about the details people use every day.{" "}
+          I&apos;ve built and maintained client websites since 2017. My professional
+          work includes responsive BigCommerce storefronts, Figma-to-code delivery,
+          JavaScript/React widgets, REST API integration, and support for live stores.{" "}
           <span className="text-[var(--text-bright)]">
-            I&apos;m putting that experience into storefronts, order fulfillment,
-            and practical tools for business owners.
+            I help teams turn designs into usable interfaces and keep their
+            websites working. My portfolio projects extend that foundation with
+            React, Next.js, .NET, and PostgreSQL.
           </span>
         </p>
         </ScrollReveal>
