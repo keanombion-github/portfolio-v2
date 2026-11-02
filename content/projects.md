@@ -4,15 +4,23 @@ section: projects
 
 # Selected projects
 
+## Our Taap — professional client work
+
+Live website: https://ourtaap.com/. Portfolio showcase: /project/our-taap.
+I deliver and maintain much of the customer-facing UI and UX from storefront
+through checkout, as part of the team supporting the live website. Featured first
+on the homepage with a public website screenshot. Contribution scope confirmed by
+Kean on 2 November 2026; no sole authorship or measured business results claimed.
+
 ## Earlier portfolio - visual frontend reference
 
 - URL: https://react-portfolio-480d8.web.app/
 - Current project page: /project/earlier-portfolio
-- Kept last, preserving ShiftLedger as the first featured project.
+- Kept last, with Our Taap now leading the featured projects.
 - Shows website template previews and an earlier visual direction. Copy may be outdated;
   use the current portfolio for current experience and project status.
 
-## ShiftLedger - first featured project
+## ShiftLedger - featured application project
 
 An attendance-first interactive browser demo with admin review, staff clock/break
 actions, correction requests, and approved CSV exports.

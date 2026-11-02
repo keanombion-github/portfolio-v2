@@ -14,7 +14,7 @@ export function Projects() {
         label="FROM EXPERIENCE TO APPLICATIONS"
         heading="Selected projects"
         path="~/projects/featured"
-        subtitle="Three featured projects exploring attendance, fulfillment, and billing. Browse the full collection for more."
+        subtitle="Live client work and practical application projects. Browse the full collection for more."
       />
       </ScrollReveal>
       <div className="grid md:grid-cols-2 gap-5">

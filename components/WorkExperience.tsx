@@ -10,22 +10,6 @@ export function WorkExperience() {
       <p className="max-w-2xl mb-9 leading-7">Building and maintaining client websites since 2017—from design handoffs and storefront launches to the support work that keeps them running.</p>
       </ScrollReveal>
       <div className="grid gap-5">
-        <ScrollReveal>
-          <article className="rounded-xl border border-[var(--border)] bg-[var(--surface)] p-6 sm:p-8">
-            <p className="eyebrow">CLIENT WORK / LIVE E-COMMERCE</p>
-            <h3 className="mt-3 font-mono text-xl text-[var(--text-bright)]">Our Taap</h3>
-            <p className="mt-2 text-sm text-[var(--accent)]">UI/UX implementation · Feature delivery · Maintenance</p>
-            <p className="mt-5 max-w-3xl text-sm leading-7">
-              I deliver and maintain frontend features across much of the Our Taap
-              shopping experience, from the storefront through checkout. My work
-              focuses on implementing and maintaining the customer-facing UI and UX
-              as part of the team supporting the live website.
-            </p>
-            <a className="button mt-5 text-xs" href="https://ourtaap.com/" target="_blank" rel="noopener noreferrer">
-              Visit Our Taap <span aria-hidden="true">↗</span><span className="sr-only"> (opens in a new tab)</span>
-            </a>
-          </article>
-        </ScrollReveal>
         {experience.map((job, index) => (
           <ScrollReveal key={job.company} delay={index * 80}>
           <article className="rounded-xl border border-[var(--border)] bg-[var(--surface)] p-6 sm:p-8">

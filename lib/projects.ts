@@ -14,6 +14,21 @@ export interface Project {
 }
 export const projects: Project[] = [
   {
+    slug: "our-taap", title: "Our Taap", subtitle: "Delivering and maintaining a live shopping experience",
+    summary: "Professional client work on a live e-commerce website: delivering and maintaining much of the customer-facing UI and UX, from the storefront through checkout.",
+    role: "Frontend · UI/UX implementation", status: "Professional client work",
+    demoUrl: "https://ourtaap.com/", demoLabel: "Visit live website",
+    stack: ["BigCommerce"],
+    screenshots: [
+      { src: "/projects/our-taap-homepage.png", alt: "Our Taap live storefront showcasing home water systems and product navigation", caption: "The public Our Taap storefront, captured in November 2026. The screenshot shows the team-maintained website; my contribution focuses on frontend UI/UX delivery and maintenance." },
+    ],
+    sections: [
+      { id: "website", title: "A shopping experience customers use", body: "Our Taap is a live e-commerce website for home water systems. Visitors can explore the products and move through the shopping journey to checkout. This showcase highlights my professional contribution to an existing client website." },
+      { id: "contribution", title: "My contribution", body: "I deliver and maintain frontend features across much of the customer-facing UI and UX, from the storefront through checkout. I work as part of the team supporting the live website, implementing features and maintaining the shopping experience as it evolves." },
+      { id: "scope", title: "Team delivery on a live website", body: "This is a team contribution, with my scope focused on frontend implementation and maintenance. The showcase does not claim sole authorship, ownership of the brand or designs, backend/payment implementation, or measured conversion results. Visit the live website to explore its current presentation; content and promotions may change." },
+    ],
+  },
+  {
     slug: "shiftledger", title: "ShiftLedger", subtitle: "Clear attendance before payroll preparation",
     summary: "An attendance workspace for small teams: review shifts, resolve missing punches, and export approved hours. Separate admin and staff views make the next action clear.",
     role: "Frontend · Business Operations", status: "Interactive browser demo",

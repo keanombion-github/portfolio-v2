@@ -38,7 +38,7 @@ const base = process.env.TEST_BASE_URL || 'http://127.0.0.1:3002';
     await page.keyboard.press('Tab');
     await page.keyboard.press('Shift+Tab');
     await card.press('Enter');
-    await page.waitForURL('**/project/shiftledger');
+    await page.waitForURL('**/project/our-taap');
     await page.goBack();
     await page.getByRole('link', { name: /View résumé/ }).waitFor();
 

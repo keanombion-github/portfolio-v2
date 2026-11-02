@@ -6,6 +6,8 @@ const paths = [
   "/about",
   "/projects",
   "/project/boardsync",
+  "/project/our-taap",
+  "/projects/our-taap-homepage.png",
   "/project/shiftledger",
   "/project/earlier-portfolio",
   "/projects/legacy-portfolio.png",
@@ -41,10 +43,10 @@ for (const path of paths) {
     assert.match(html, /href="\/resume\/Kean_Ombion_Resume\.pdf"/);
     assert.match(html, /href="https:\/\/github\.com\/keanombion-github\/?"/);
     assert.match(html, /href="https:\/\/www\.linkedin\.com\/in\/kean-ombion-954769235\/?"/);
-    assert.match(html, /href="https:\/\/ourtaap\.com\/"/);
+    assert.match(html, /href="\/project\/our-taap"/);
     assert.match(html, /View all projects/);
     assert.equal((html.match(/class="project-card /g) || []).length, 3, 'Homepage shows three featured projects');
-    for (const image of ['shiftledger-overview.png', 'orderpilot-workspace.png', 'k3-billing-dashboard.png'])
+    for (const image of ['our-taap-homepage.png', 'shiftledger-overview.png', 'orderpilot-workspace.png'])
       assert.ok(html.includes(image), `Homepage preview missing: ${image}`);
   }
   if (path.endsWith('.pdf')) {
