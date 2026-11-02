@@ -5,6 +5,7 @@ import { SectionHeader } from "./SectionHeader";
 import { ScrollReveal } from "./ScrollReveal";
 import { ProjectMotionLink } from "./ProjectMotionLink";
 export function Projects() {
+  const featuredProjects = projects.slice(0, 3);
   return (
     <section className="section-shell" id="projects">
       <ScrollReveal>
@@ -13,11 +14,11 @@ export function Projects() {
         label="FROM EXPERIENCE TO APPLICATIONS"
         heading="Selected projects"
         path="~/projects/featured"
-        subtitle="Attendance, storefronts, fulfillment, and billing: practical workflows you can explore."
+        subtitle="Three featured projects exploring attendance, fulfillment, and billing. Browse the full collection for more."
       />
       </ScrollReveal>
       <div className="grid md:grid-cols-2 gap-5">
-        {projects.map((p, i) => (
+        {featuredProjects.map((p, i) => (
           <ScrollReveal key={p.slug} delay={(i % 2) * 150} className="h-full">
           <ProjectMotionLink href={`/project/${p.slug}`}>
             <div className="flex justify-between font-mono text-xs">
@@ -59,15 +60,12 @@ export function Projects() {
           </ScrollReveal>
         ))}
       </div>
-      <div className="flex justify-between items-center border-t border-dashed border-[var(--border)] mt-9 pt-6 font-mono text-xs">
+      <div className="flex flex-wrap gap-4 justify-between items-center border-t border-dashed border-[var(--border)] mt-9 pt-6 font-mono text-xs">
         <span>
-          <span className="text-[var(--text-faint)]">$ </span>ls -al /projects{" "}
-          <span className="hidden sm:inline text-[var(--text-faint)] ml-3">
-            {"// follow the progress"}
-          </span>
+          Showing {featuredProjects.length} of {projects.length} projects
         </span>
         <Link className="button text-xs" href="/projects">
-          $ view all →
+          View all projects →
         </Link>
       </div>
     </section>

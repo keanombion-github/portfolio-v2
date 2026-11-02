@@ -18,6 +18,17 @@ section: about
 
 Employment dates and responsibilities are sourced from the supplied résumé.
 
+## Featured client work: Our Taap
+
+I deliver and maintain frontend features across much of the Our Taap shopping
+experience, from the storefront through checkout. My work focuses on implementing
+and maintaining the customer-facing UI and UX as part of the team supporting the
+live website: https://ourtaap.com/.
+
+Contribution scope confirmed by Kean on 2 November 2026. This is professional
+client work; sole ownership, backend/payment implementation, and measured business
+results are not claimed.
+
 My foundation is frontend development: BigCommerce storefronts, design handoffs,
 responsive pages, and maintenance for live client websites. Support and operations
 added SLA tickets, troubleshooting, and AWS-backed workflows to that perspective.
