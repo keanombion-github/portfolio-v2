@@ -341,14 +341,14 @@ textarea::placeholder {
   opacity: 0.45;
 }
 .cursor-dots-spotlight {
-  background-image: radial-gradient(circle, var(--accent) 2.2px, transparent 2.9px);
-  mask-image: radial-gradient(circle 330px at var(--pointer-x, -1000px) var(--pointer-y, -1000px), black 8%, transparent 100%);
-  -webkit-mask-image: radial-gradient(circle 330px at var(--pointer-x, -1000px) var(--pointer-y, -1000px), black 8%, transparent 100%);
+  background-image: radial-gradient(circle, var(--accent) 1.2px, transparent 1.8px);
+  mask-image: radial-gradient(circle 150px at var(--pointer-x, -1000px) var(--pointer-y, -1000px), black 8%, transparent 100%);
+  -webkit-mask-image: radial-gradient(circle 150px at var(--pointer-x, -1000px) var(--pointer-y, -1000px), black 8%, transparent 100%);
   opacity: 0;
   transition: opacity 180ms;
 }
 .cursor-dots-spotlight[data-active] {
-  opacity: 0.9;
+  opacity: 0.45;
 }
 .motion-text-surface {
   position: relative;

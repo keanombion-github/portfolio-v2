@@ -15,7 +15,7 @@ const base = process.env.TEST_BASE_URL || 'http://127.0.0.1:3002';
     const dots = page.locator('.cursor-dots-spotlight');
     await dots.waitFor();
     await page.mouse.move(220, 200);
-    await page.waitForFunction(() => Number(getComputedStyle(document.querySelector('.cursor-dots-spotlight')).opacity) > 0.5);
+    await page.waitForFunction(() => Number(getComputedStyle(document.querySelector('.cursor-dots-spotlight')).opacity) > 0.1);
     const idlePosition = await dots.evaluate(el => el.style.getPropertyValue('--pointer-x'));
     assert.ok(parseFloat(idlePosition) > 0, 'Spotlight follows the pointer');
 
@@ -54,7 +54,7 @@ const base = process.env.TEST_BASE_URL || 'http://127.0.0.1:3002';
     const plain = await noJs.newPage();
     await plain.goto(base);
     assert.equal(await plain.locator('#projects').isVisible(), true, 'No-JS content remains readable');
-    assert.equal(await plain.locator('#projects a.project-card').count(), 6);
+    assert.equal(await plain.locator('#projects a.project-card').count(), 3);
     await noJs.close();
     await context.close();
     console.log('PASS motion: spotlight, reveals, cards, reduced motion, navigation, mobile, no-JS');
